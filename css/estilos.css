@@ -43,6 +43,12 @@ html {
     background-repeat: no-repeat;
 }
 
+.header .barra .logo:hover {
+    background-image: radial-gradient(rgba(139, 33, 171, 0.5), rgba(35, 32, 31, 0.2)), url(../img/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .header .iconoNav i {
     color: #fff;
     margin: 20px 20px;
@@ -149,14 +155,21 @@ html {
     background-color: #fff;
     border: #7c01a1de solid 1px;
     text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #7c01a1;
     z-index: 7;
+}
+.infoPedidos:hover {
+    background-color: #7c01a1;
+    border:  solid 2px black;
+    transform: scaleY(1.2);
 }
 .infoPedidos a {
     text-decoration: none;
-    color: #7c01a1de;
-    font-size: 16px;
-    padding: 5px;
-    font-weight: bolder;
+}
+.infoPedidos a:hover {
+    color: #fff;
 }
 .infoPedidos span {
     display: block;
@@ -175,7 +188,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
-    background-color: rgb(214, 214, 214);
+    background-image: url(fondos/low-poly-grid-haikei.svg);
     border: solid 2px black;
     align-items: center;
     justify-items: stretch;
@@ -197,6 +210,10 @@ html {
     border: 2px solid #fff;
     box-shadow: 2px 2px 5px #333;
 }
+.imgProdIndex:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
+}
 .sec .encargar {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -215,17 +232,81 @@ html {
     background-image: url(../img/tortaPanda.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio1;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio1 {
+    0% {
+        background-image: url(../img/tortaPanda.png);
+    }
+    25% {
+        background-image: url(../img/tortaCeleste.png);
+    }
+    50% {
+        background-image: url(../img/tortaChop.png);
+    }
+    75% {
+        background-image: url(../img/tortaGolondrinas.png);
+    }
+    100% {
+        background-image: url(../img/tortaPanda.png);
+    }
 }
 .imgProdIndex2 {
     background-image: url(../img/cheeseCake.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio2;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio2 {
+    0% {
+        background-image: url(../img/cheeseCake.png);
+    }
+    25% {
+        background-image: url(../img/brownie.png);
+    }
+    50% {
+        background-image: url(../img/lemonPie.png);
+    }
+    75% {
+        background-image: url(../img/frutilla.png);
+    }
+    100% {
+        background-image: url(../img/cheeseCake.png);
+    }
 }
 .imgProdIndex3 {
     background-image: url(../img/muffins.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio3;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
+@keyframes cambio3 {
+    0% {
+        background-image: url(../img/muffins.png);
+    }
+    25% {
+        background-image: url(../img/cookies.png);
+    }
+    50% {
+        background-image: url(../img/muffins2.png);
+    }
+    75% {
+        background-image: url(../img/cookies2.png);
+    }
+    100% {
+        background-image: url(../img/muffins.png);
+    }
+}
+
 .boton {
     color: #fff;
     font-size: 18px;
@@ -240,6 +321,7 @@ html {
 }
 .boton:hover {
     background-color: #23201f;
+    transform: scale(1.1);
 }
 /*-----------------fin main index-------------------*/
 
@@ -250,6 +332,7 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 2fr 1fr;
+    background-image: url(fondos/low-poly-grid-haikei.svg);
     border: solid 2px black;
     align-items: center;
     justify-items: stretch;
@@ -273,10 +356,22 @@ html {
     padding: 5px;
     justify-self: center;
 }
+.secProd .imgProdProd:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
+}
 .secProd .fotoOculta {
     border: 2px solid #fff;
     box-shadow: 2px 2px 5px #333;
+    height: 85%;
+    width: 75%;
+    background-position: center;
+    background-size: cover;
     display: none;
+}
+.secProd .fotoOculta:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
 }
 .secProd .encargar {
     grid-column: 1/2;
@@ -293,26 +388,427 @@ html {
     background-image: url(../img/tortaPanda.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio1;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 .imgProdProd2a {
     background-image: url(../img/cheeseCake.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio2;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 .imgProdProd3a {
     background-image: url(../img/muffins.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio3;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 .imgProdProd4a {
     background-image: url(../img/alfajores.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio4;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio4 {
+    0% {
+        background-image: url(../img/alfajores.png);
+    }
+    25% {
+        background-image: url(../img/alfajores2.png);
+    }
+    50% {
+        background-image: url(../img/alfajores3.png);
+    }
+    75% {
+        background-image: url(../img/alfajores4.png);
+    }
+    100% {
+        background-image: url(../img/alfajores.png);
+    }
 }
 .imgProdProd5a {
     background-image: url(../img/cajaUno.png);
     background-position: center;
     background-size: cover;
+    animation-name: cambio5;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio5 {
+    0% {
+        background-image: url(../img/cajaUno.png);
+    }
+    25% {
+        background-image: url(../img/cajaDos.png);
+    }
+    50% {
+        background-image: url(../img/caja3.png);
+    }
+    75% {
+        background-image: url(../img/caja4.png);
+    }
+    100% {
+        background-image: url(../img/cajaUno.png);
+    }
+}
+.secProd .imgProdProd1b {
+    animation-name: cambio1b;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio1b {
+    0% {
+        background-image: url(../img/tortaGolondrinas.png);
+    }
+    25% {
+        background-image: url(../img/tortaPanda.png);
+    }
+    50% {
+        background-image: url(../img/tortaCeleste.png);
+    }
+    75% {
+        background-image: url(../img/tortaChop.png);
+
+    }
+    100% {
+        background-image: url(../img/tortaGolondrinas.png);
+    }
+}
+.secProd .imgProdProd1c {
+    animation-name: cambio1c;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio1c {
+    0% {
+        background-image: url(../img/tortaChop.png);
+    }
+    25% {
+        background-image: url(../img/tortaGolondrinas.png);
+    }
+    50% {
+        background-image: url(../img/tortaPanda.png);
+    }
+    75% {
+        background-image: url(../img/tortaCeleste.png);
+    }
+    100% {
+        background-image: url(../img/tortaChop.png);
+    }
+}
+.secProd .imgProdProd1d {
+    animation-name: cambio1d;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio1d {
+    0% {
+        background-image: url(../img/tortaCeleste.png);
+    }
+    25% {
+        background-image: url(../img/tortaChop.png);
+    }
+    50% {
+        background-image: url(../img/tortaGolondrinas.png);
+    }
+    75% {
+        background-image: url(../img/tortaPanda.png);
+    }
+    100% {
+        background-image: url(../img/tortaCeleste.png);
+    }
+}
+.secProd .imgProdProd2b {
+    animation-name: cambio2b;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio2b {
+    0% {
+        background-image: url(../img/frutilla.png);
+    }
+    25% {
+        background-image: url(../img/cheeseCake.png);
+    }
+    50% {
+        background-image: url(../img/brownie.png);
+    }
+    75% {
+        background-image: url(../img/lemonPie.png);
+    }
+    100% {
+        background-image: url(../img/frutilla.png);
+    }
+}
+.secProd .imgProdProd2c {
+    animation-name: cambio2c;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio2c {
+    0% {
+        background-image: url(../img/lemonPie.png);
+    }
+    25% {
+        background-image: url(../img/frutilla.png);
+    }
+    50% {
+        background-image: url(../img/cheeseCake.png);
+    }
+    75% {
+        background-image: url(../img/brownie.png);
+    }
+    100% {
+        background-image: url(../img/lemonPie.png);
+    }
+}
+.secProd .imgProdProd2d {
+    animation-name: cambio2d;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio2d {
+    0% {
+        background-image: url(../img/brownie.png);
+    }
+    25% {
+        background-image: url(../img/lemonPie.png);
+    }
+    50% {
+        background-image: url(../img/frutilla.png);
+    }
+    75% {
+        background-image: url(../img/cheeseCake.png);
+    }
+    100% {
+        background-image: url(../img/brownie.png);
+    }
+}
+.secProd .imgProdProd3b {
+    animation-name: cambio3b;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio3b {
+    0% {
+        background-image: url(../img/cookies2.png);
+    }
+    25% {
+        background-image: url(../img/muffins.png);
+    }
+    50% {
+        background-image: url(../img/cookies.png);
+    }
+    75% {
+        background-image: url(../img/muffins2.png);
+    }
+    100% {
+        background-image: url(../img/cookies2.png);
+    }
+}
+.secProd .imgProdProd3c {
+    animation-name: cambio3c;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio3c {
+    0% {
+        background-image: url(../img/muffins2.png);
+    }
+    25% {
+        background-image: url(../img/cookies2.png);
+    }
+    50% {
+        background-image: url(../img/muffins.png);
+    }
+    75% {
+        background-image: url(../img/cookies.png);
+    }
+    100% {
+        background-image: url(../img/muffins2.png);
+    }
+}
+.secProd .imgProdProd3d {
+    animation-name: cambio3d;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio3d {
+    0% {
+        background-image: url(../img/cookies.png);
+    }
+    25% {
+        background-image: url(../img/muffins2.png);
+    }
+    50% {
+        background-image: url(../img/cookies2.png);
+    }
+    75% {
+        background-image: url(../img/muffins.png);
+    }
+    100% {
+        background-image: url(../img/cookies.png);
+    }
+}
+.secProd .imgProdProd4b {
+    animation-name: cambio4b;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio4b {
+    0% {
+        background-image: url(../img/alfajores4.png);
+    }
+    25% {
+        background-image: url(../img/alfajores.png);
+    }
+    50% {
+        background-image: url(../img/alfajores2.png);
+    }
+    75% {
+        background-image: url(../img/alfajores3.png);
+    }
+    100% {
+        background-image: url(../img/alfajores4.png);
+    }
+}
+.secProd .imgProdProd4c {
+    animation-name: cambio4c;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio4c {
+    0% {
+        background-image: url(../img/alfajores3.png);
+    }
+    25% {
+        background-image: url(../img/alfajores4.png);
+    }
+    50% {
+        background-image: url(../img/alfajores.png);
+    }
+    75% {
+        background-image: url(../img/alfajores2.png);
+    }
+    100% {
+        background-image: url(../img/alfajores3.png);
+    }
+}
+.secProd .imgProdProd4d {
+    animation-name: cambio4d;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio4d {
+    0% {
+        background-image: url(../img/alfajores2.png);
+    }
+    25% {
+        background-image: url(../img/alfajores3.png);
+    }
+    50% {
+        background-image: url(../img/alfajores4.png);
+    }
+    75% {
+        background-image: url(../img/alfajores.png);
+    }
+    100% {
+        background-image: url(../img/alfajores2.png);
+    }
+}
+
+.secProd .imgProdProd5b {
+    animation-name: cambio5b;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio5b {
+    0% {
+        background-image: url(../img/caja4.png);
+    }
+    25% {
+        background-image: url(../img/cajaUno.png);
+    }
+    50% {
+        background-image: url(../img/cajaDos.png);
+    }
+    75% {
+        background-image: url(../img/caja3.png);
+    }
+    100% {
+        background-image: url(../img/caja4.png);
+    }
+}
+.secProd .imgProdProd5c {
+    animation-name: cambio5c;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio5c {
+    0% {
+        background-image: url(../img/caja3.png);
+    }
+    25% {
+        background-image: url(../img/caja4.png);
+    }
+    50% {
+        background-image: url(../img/cajaUno.png);
+    }
+    75% {
+        background-image: url(../img/cajaDos.png);
+    }
+    100% {
+        background-image: url(../img/caja3.png);
+    }
+}
+.secProd .imgProdProd5d {
+    animation-name: cambio5d;
+    animation-duration: 60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes cambio5d {
+    0% {
+        background-image: url(../img/cajaDos.png);
+    }
+    25% {
+        background-image: url(../img/caja3.png);
+    }
+    50% {
+        background-image: url(../img/caja4.png);
+    }
+    75% {
+        background-image: url(../img/cajaUno.png);
+    }
+    100% {
+        background-image: url(../img/cajaDos.png);
+    }
 }
 /*-----------------fin main productos-------------------*/
 
@@ -329,6 +825,10 @@ html {
     border: 2px solid #fff;
     margin: 20px;
     box-shadow: 2px 2px 5px #333;
+}
+.item:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
 }
 .item1 {
     background-image: url(../img/lemonPie.png);
@@ -423,18 +923,6 @@ html {
     padding: 25px;
     display: none;
 }
-.contForm {
-    height: auto;
-    background-color: #593b639d;
-    border: #fff solid 1px;
-    color: #fff;
-    align-self: center;
-    border-radius: 10%;
-    margin: 30px 20px;
-    padding: 25px;
-    font-size: 20px;
-    align-self: center;
-}
 /*-----------------fin main sobre mi-------------------*/
 
 /*-----------------comienzo main contacto-------------------*/
@@ -496,6 +984,15 @@ html {
 }
 .contForm .botonEnviar:hover {
     background-color: #23201f;
+    transform: scale(1.2);
+}
+input {
+    transition: all 1s;
+}
+input:focus {
+    font-size: 22px;
+    border: 5px #511364 solid;
+    color: #511364;
 }
 /*-----------------fin main contacto-------------------*/
 
@@ -1166,56 +1663,6 @@ html {
         grid-column: 2/3;
         grid-row: 3/4;
     }
-    .secProd .imgProdProd1b {
-        background-image: url(../img/tortaCeleste.png);
-    }
-    .secProd .imgProdProd1c {
-        background-image: url(../img/tortaGolondrinas.png);
-    }
-    .secProd .imgProdProd1d {
-        background-image: url(../img/tortaChop.png);
-    }
-
-    .secProd .imgProdProd2b {
-        background-image: url(../img/brownie.png);
-    }
-    .secProd .imgProdProd2c {
-        background-image: url(../img/lemonPie.png);
-    }
-    .secProd .imgProdProd2d {
-        background-image: url(../img/frutilla.png);
-    }
-
-    .secProd .imgProdProd3b {
-        background-image: url(../img/cookies.png);
-    }
-    .secProd .imgProdProd3c {
-        background-image: url(../img/muffins2.png);
-    }
-    .secProd .imgProdProd3d {
-        background-image: url(../img/cookies2.png);
-    }
-
-    .secProd .imgProdProd4b {
-        background-image: url(../img/alfajores2.png);
-    }
-    .secProd .imgProdProd4c {
-        background-image: url(../img/alfajores3.png);
-    }
-    .secProd .imgProdProd4d {
-        background-image: url(../img/alfajores4.png);
-    }
-
-    .secProd .imgProdProd5b {
-        background-image: url(../img/cajaDos.png);
-    }
-    .secProd .imgProdProd5c {
-        background-image: url(../img/caja3.png);
-    }
-    .secProd .imgProdProd5d {
-        background-image: url(../img/caja4.png);
-    }
-
     .secProd .encargar {
         padding: 10px 30px;
         font-size: 25px;
