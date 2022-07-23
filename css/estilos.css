@@ -1,198 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
 /*
 font-family: 'Playfair Display', serif;
 */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     overflow-x: hidden;
 }
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     font-family: 'Playfair Display', serif;
 }
 
-/*-----------------comienzo encabezado-------------------*/
-.header {
-    height: auto;
-    width: 100%;
-}
-/*----------------comienzo barra movil-----------------*/
-.header .barra {
-    position: fixed; 
-    height: 80px;
-    width: 100%;
-    color: #fff;
+/*------------- header inicio --------------*/
+/*-------------- barra inicio ---------------*/
+.navbar {
     background-color: #23201f;
+}
+.navbar-brand {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 8;
 }
-.header .barra .logo {
-    height: 40px;
-    width: 40px;
-    margin: 20px 25px;
-    background-image: url(../img/logo.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
+.logo {
+    width: 4rem;
+    margin: 10%;
 }
-
-.header .barra .logo:hover {
-    background-image: radial-gradient(rgba(139, 33, 171, 0.5), rgba(35, 32, 31, 0.2)), url(../img/logo.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.header .iconoNav i {
-    color: #fff;
-    margin: 20px 20px;
-    padding: 10px;
-    border: solid 1px #fff;
-    font-size: 15px;
-}
-.header .iconoNav i:hover {
-    background-color: #cd34fc;
-}
-.header .iconoNav .barraEnIcono {
-    display: none;
-}
-.header .menu {
-    display: none;
-}
-.header .barra ul {
-    list-style: none;
-    font-size: 0;
-    display: flex;
-    align-items: center;
-    color: #fff;
-}
-.header .barra ul li {
+.navbar-brand h2{
     display: inline-block;
+    font-style: italic;
+    text-shadow: 0 0 25px #881c1c;
+    margin: 10px 5px;
 }
-.header .barra ul li a {
-    text-decoration: none;
+.navbar-brand h2 span{
+    display: block;
+    padding-left: 25px;
+}
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+.navbar-toggler:hover {
+    transform: scale(1.2);
+}
+.dropdown-item {
     color: #fff;
-    font-size: 18px;
+}
+.submenu-item {
+    padding: 0 5%;
+    color: #d69595;
+}
+.submenu-item:hover {
+    background-color: #d69595;
+}
+.redesNav {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.redesNav-item {
+    color: #fff;
+    padding: 0.5rem;
+}
+.redesNav-item:hover,
+.redesNav-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #e9ecef;
+}
+/*-------------- barra fin ---------------*/
+/*-------------- jumbotron inicio ---------------*/
+.jumbotron {
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    min-height: 30vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+.jumbotron-index {
+    background-image: url(../assets/img/muffins2.png);
+}
+.jumbotron-productos {
+    background-image: url(../assets/img/frutilla.png);
+}
+.jumbotron-galeria {
+    background-image: url(../assets/img/frutosRojos.png);
+}
+.jumbotron-sobre-mi {
+    background-image: url(../assets/img/cheeseCake.png);
+}
+.jumbotron-contacto {
+    background-image: url(../assets/img/alfajores4.png);
+}
+.jumbotron .container {
+    background-color: #23201f;
+    max-width: 50%;
+    float: left;
+    margin-left: 5%;
     padding: 20px;
-}
-.header .barra ul li a:hover {
-    color: #cd34fc;
-}
-.barra ul ul {
-    position: absolute;
-    display: none;
-    padding: 0;
-}
-.header .barra ul ul li {
-    display: block;
-    padding: 0;
-    margin: 5px;
-}
-.header .barra ul ul li a{
-    color: #23201f;
-    padding: 5px;
-}
-.header .barra ul li:hover ul {
-    display: block;
-    background-color: #fff;
-    border: #cd34fc solid 2px;
+    border: #4b0303 5px inset;
+    text-shadow: 0 0 5px #881c1c;
     justify-items: center;
 }
-.header .barra ul ul li:hover a{
-    color: #7c01a1;
+.jumbotron h1 {
+    font-size: 2rem;
+    /*cambiar en resolución <310px*/
+    font-style: italic;
+    margin-bottom: 2.5rem;
 }
-.header .redes {
-    display: none;
+.jumbotron p {
+    font-size: 1.5rem;
 }
-.header .redes i {
-    letter-spacing: 2px;
-}
-/*----------------fin barra movil-----------------*/
-
-/*----------------comienzo titulo pagina-----------------*/
-.header .intro {
-    position: relative;
-    top: 80px;
-    height: 120px;
-    width: 100%;
-    background-image: radial-gradient(rgb(48, 43, 43) 15%,#23201f 40%);
+.jumbotron .redes a {
     color: #fff;
-    text-shadow: 3px 3px 8px #cd34fc;
-    line-height: 1.5;
-    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 20px;
 }
-.intro h1 {
-    font-size: 40px;
-    font-style: italic;
-    position: relative;
-    top: 10px;
+.jumbotron .redes a:hover {
+    color: #881c1c;
+    font-size: 2rem;
 }
-.intro span {
-    display: block;
-    font-size: 16px;
-    font-style: normal;
+.jumbotron button {
+    font-size: 1.2rem;
+    background-color: #881c1c;
+    border: solid 1px white;
+    margin: 20px 0px;
+    display: flex;
 }
-.intro h2 {
-    font-size: 30px;
-    font-style: italic;
-    position: relative;
-    top: 30px;
-}
-/*----------------fin titulo pagina-----------------*/
-
-/*----------------comienzo info pedidos movil-----------------*/
-.infoPedidos {
-    width: 100%;
-    height: auto;
-    position: relative; /* position: sticky;*/
-    top: 80px;
-    background-color: #fff;
-    border: #7c01a1de solid 1px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bolder;
-    color: #7c01a1;
-    z-index: 7;
-}
-.infoPedidos:hover {
-    background-color: #7c01a1;
-    border:  solid 2px black;
-    transform: scaleY(1.2);
-}
-.infoPedidos a {
+.jumbotron button:hover {
+    background-color: #4b0303;
+    border: solid 2px white;
+    transform: scale(1.1);
+    color: #fff;
     text-decoration: none;
 }
-.infoPedidos a:hover {
-    color: #fff;
+.jumbotron a:hover {
+    text-decoration: none;
 }
+/*-------------- jumbotron fin ---------------*/
+/*---------info pedidos inicio---------*/
+.infoPedidos {
+    width: 100%;
+    background-color: #d8d6d5;
+    border: #881c1c solid 1px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.infoPedidos:hover {
+    background-color: #b63434;
+    border: solid 2px black;
+    transform: scaleY(1.1);
+}
+
+.infoPedidos a {
+    text-decoration: none;
+    color: #881c1c;
+}
+
 .infoPedidos span {
-    display: block;
+    display: inline-block;
 }
-/*----------------fin info pedidos movil-----------------*/
-/*-----------------fin encabezado-------------------*/
+
+.infoPedidos a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/*---------info pedidos inicio---------*/
+/*------------- header fin --------------*/
 
 /*-----------------comienzo main index-------------------*/
-.main {
-    position: relative;
-    top: 80px;
-}
 .sec {
     width: 100%;
     height: 350px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
-    background-image: url(fondos/low-poly-grid-haikei.svg);
+    background-image: url(./fondos/low-poly-grid-haikei.svg);
     border: solid 2px black;
     align-items: center;
     justify-items: stretch;
 }
+
 .sec h4 {
     grid-column: 1/3;
     grid-row: 1/2;
@@ -201,6 +206,7 @@ html {
     font-style: italic;
     font-weight: 1500;
 }
+
 .sec .imgProdIndex {
     grid-column: 1/3;
     grid-row: 2/3;
@@ -210,10 +216,12 @@ html {
     border: 2px solid #fff;
     box-shadow: 2px 2px 5px #333;
 }
+
 .imgProdIndex:hover {
     transform: scale(1.05);
     transition: all 0.7s;
 }
+
 .sec .encargar {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -221,6 +229,7 @@ html {
     width: auto;
     padding: 5px 10px;
 }
+
 .sec .verMas {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -228,8 +237,9 @@ html {
     width: auto;
     padding: 5px 10px;
 }
+
 .imgProdIndex1 {
-    background-image: url(../img/tortaPanda.png);
+    background-image: url(../assets/img/tortaPanda.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio1;
@@ -237,25 +247,31 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio1 {
     0% {
-        background-image: url(../img/tortaPanda.png);
+        background-image: url(../assets/img/tortaPanda.png);
     }
+
     25% {
-        background-image: url(../img/tortaCeleste.png);
+        background-image: url(../assets/img/tortaCeleste.png);
     }
+
     50% {
-        background-image: url(../img/tortaChop.png);
+        background-image: url(../assets/img/tortaChop.png);
     }
+
     75% {
-        background-image: url(../img/tortaGolondrinas.png);
+        background-image: url(../assets/img/tortaGolondrinas.png);
     }
+
     100% {
-        background-image: url(../img/tortaPanda.png);
+        background-image: url(../assets/img/tortaPanda.png);
     }
 }
+
 .imgProdIndex2 {
-    background-image: url(../img/cheeseCake.png);
+    background-image: url(../assets/img/cheeseCake.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio2;
@@ -263,25 +279,31 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio2 {
     0% {
-        background-image: url(../img/cheeseCake.png);
+        background-image: url(../assets/img/cheeseCake.png);
     }
+
     25% {
-        background-image: url(../img/brownie.png);
+        background-image: url(../assets/img/brownie.png);
     }
+
     50% {
-        background-image: url(../img/lemonPie.png);
+        background-image: url(../assets/img/lemonPie.png);
     }
+
     75% {
-        background-image: url(../img/frutilla.png);
+        background-image: url(../assets/img/frutilla.png);
     }
+
     100% {
-        background-image: url(../img/cheeseCake.png);
+        background-image: url(../assets/img/cheeseCake.png);
     }
 }
+
 .imgProdIndex3 {
-    background-image: url(../img/muffins.png);
+    background-image: url(../assets/img/muffins.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio3;
@@ -289,21 +311,26 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio3 {
     0% {
-        background-image: url(../img/muffins.png);
+        background-image: url(../assets/img/muffins.png);
     }
+
     25% {
-        background-image: url(../img/cookies.png);
+        background-image: url(../assets/img/cookies.png);
     }
+
     50% {
-        background-image: url(../img/muffins2.png);
+        background-image: url(../assets/img/muffins2.png);
     }
+
     75% {
-        background-image: url(../img/cookies2.png);
+        background-image: url(../assets/img/cookies2.png);
     }
+
     100% {
-        background-image: url(../img/muffins.png);
+        background-image: url(../assets/img/muffins.png);
     }
 }
 
@@ -319,10 +346,12 @@ html {
     width: 120px;
     justify-content: center;
 }
+
 .boton:hover {
     background-color: #23201f;
     transform: scale(1.1);
 }
+
 /*-----------------fin main index-------------------*/
 
 /*-----------------comienzo main productos-------------------*/
@@ -332,12 +361,13 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 2fr 1fr;
-    background-image: url(fondos/low-poly-grid-haikei.svg);
+    background-image: url(./fondos/low-poly-grid-haikei.svg);
     border: solid 2px black;
     align-items: center;
     justify-items: stretch;
     text-align: center;
 }
+
 .secProd h4 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -346,6 +376,7 @@ html {
     font-style: italic;
     font-weight: 1500;
 }
+
 .secProd .imgProdProd {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -356,10 +387,12 @@ html {
     padding: 5px;
     justify-self: center;
 }
+
 .secProd .imgProdProd:hover {
     transform: scale(1.05);
     transition: all 0.7s;
 }
+
 .secProd .fotoOculta {
     border: 2px solid #fff;
     box-shadow: 2px 2px 5px #333;
@@ -369,23 +402,27 @@ html {
     background-size: cover;
     display: none;
 }
+
 .secProd .fotoOculta:hover {
     transform: scale(1.05);
     transition: all 0.7s;
 }
+
 .secProd .encargar {
     grid-column: 1/2;
     grid-row: 4/5;
     justify-self: center;
 }
+
 .secProd p {
     grid-column: 1/2;
     grid-row: 3/4;
     font-size: 16px;
     padding: 5px;
 }
+
 .imgProdProd1a {
-    background-image: url(../img/tortaPanda.png);
+    background-image: url(../assets/img/tortaPanda.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio1;
@@ -393,8 +430,9 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 .imgProdProd2a {
-    background-image: url(../img/cheeseCake.png);
+    background-image: url(../assets/img/cheeseCake.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio2;
@@ -402,8 +440,9 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 .imgProdProd3a {
-    background-image: url(../img/muffins.png);
+    background-image: url(../assets/img/muffins.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio3;
@@ -411,8 +450,9 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 .imgProdProd4a {
-    background-image: url(../img/alfajores.png);
+    background-image: url(../assets/img/alfajores.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio4;
@@ -420,25 +460,31 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio4 {
     0% {
-        background-image: url(../img/alfajores.png);
+        background-image: url(../assets/img/alfajores.png);
     }
+
     25% {
-        background-image: url(../img/alfajores2.png);
+        background-image: url(../assets/img/alfajores2.png);
     }
+
     50% {
-        background-image: url(../img/alfajores3.png);
+        background-image: url(../assets/img/alfajores3.png);
     }
+
     75% {
-        background-image: url(../img/alfajores4.png);
+        background-image: url(../assets/img/alfajores4.png);
     }
+
     100% {
-        background-image: url(../img/alfajores.png);
+        background-image: url(../assets/img/alfajores.png);
     }
 }
+
 .imgProdProd5a {
-    background-image: url(../img/cajaUno.png);
+    background-image: url(../assets/img/cajaUno.png);
     background-position: center;
     background-size: cover;
     animation-name: cambio5;
@@ -446,298 +492,375 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio5 {
     0% {
-        background-image: url(../img/cajaUno.png);
+        background-image: url(../assets/img/cajaUno.png);
     }
+
     25% {
-        background-image: url(../img/cajaDos.png);
+        background-image: url(../assets/img/cajaDos.png);
     }
+
     50% {
-        background-image: url(../img/caja3.png);
+        background-image: url(../assets/img/caja3.png);
     }
+
     75% {
-        background-image: url(../img/caja4.png);
+        background-image: url(../assets/img/caja4.png);
     }
+
     100% {
-        background-image: url(../img/cajaUno.png);
+        background-image: url(../assets/img/cajaUno.png);
     }
 }
+
 .secProd .imgProdProd1b {
     animation-name: cambio1b;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio1b {
     0% {
-        background-image: url(../img/tortaGolondrinas.png);
+        background-image: url(../assets/img/tortaGolondrinas.png);
     }
+
     25% {
-        background-image: url(../img/tortaPanda.png);
+        background-image: url(../assets/img/tortaPanda.png);
     }
+
     50% {
-        background-image: url(../img/tortaCeleste.png);
+        background-image: url(../assets/img/tortaCeleste.png);
     }
+
     75% {
-        background-image: url(../img/tortaChop.png);
+        background-image: url(../assets/img/tortaChop.png);
 
     }
+
     100% {
-        background-image: url(../img/tortaGolondrinas.png);
+        background-image: url(../assets/img/tortaGolondrinas.png);
     }
 }
+
 .secProd .imgProdProd1c {
     animation-name: cambio1c;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio1c {
     0% {
-        background-image: url(../img/tortaChop.png);
+        background-image: url(../assets/img/tortaChop.png);
     }
+
     25% {
-        background-image: url(../img/tortaGolondrinas.png);
+        background-image: url(../assets/img/tortaGolondrinas.png);
     }
+
     50% {
-        background-image: url(../img/tortaPanda.png);
+        background-image: url(../assets/img/tortaPanda.png);
     }
+
     75% {
-        background-image: url(../img/tortaCeleste.png);
+        background-image: url(../assets/img/tortaCeleste.png);
     }
+
     100% {
-        background-image: url(../img/tortaChop.png);
+        background-image: url(../assets/img/tortaChop.png);
     }
 }
+
 .secProd .imgProdProd1d {
     animation-name: cambio1d;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio1d {
     0% {
-        background-image: url(../img/tortaCeleste.png);
+        background-image: url(../assets/img/tortaCeleste.png);
     }
+
     25% {
-        background-image: url(../img/tortaChop.png);
+        background-image: url(../assets/img/tortaChop.png);
     }
+
     50% {
-        background-image: url(../img/tortaGolondrinas.png);
+        background-image: url(../assets/img/tortaGolondrinas.png);
     }
+
     75% {
-        background-image: url(../img/tortaPanda.png);
+        background-image: url(../assets/img/tortaPanda.png);
     }
+
     100% {
-        background-image: url(../img/tortaCeleste.png);
+        background-image: url(../assets/img/tortaCeleste.png);
     }
 }
+
 .secProd .imgProdProd2b {
     animation-name: cambio2b;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio2b {
     0% {
-        background-image: url(../img/frutilla.png);
+        background-image: url(../assets/img/frutilla.png);
     }
+
     25% {
-        background-image: url(../img/cheeseCake.png);
+        background-image: url(../assets/img/cheeseCake.png);
     }
+
     50% {
-        background-image: url(../img/brownie.png);
+        background-image: url(../assets/img/brownie.png);
     }
+
     75% {
-        background-image: url(../img/lemonPie.png);
+        background-image: url(../assets/img/lemonPie.png);
     }
+
     100% {
-        background-image: url(../img/frutilla.png);
+        background-image: url(../assets/img/frutilla.png);
     }
 }
+
 .secProd .imgProdProd2c {
     animation-name: cambio2c;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio2c {
     0% {
-        background-image: url(../img/lemonPie.png);
+        background-image: url(../assets/img/lemonPie.png);
     }
+
     25% {
-        background-image: url(../img/frutilla.png);
+        background-image: url(../assets/img/frutilla.png);
     }
+
     50% {
-        background-image: url(../img/cheeseCake.png);
+        background-image: url(../assets/img/cheeseCake.png);
     }
+
     75% {
-        background-image: url(../img/brownie.png);
+        background-image: url(../assets/img/brownie.png);
     }
+
     100% {
-        background-image: url(../img/lemonPie.png);
+        background-image: url(../assets/img/lemonPie.png);
     }
 }
+
 .secProd .imgProdProd2d {
     animation-name: cambio2d;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio2d {
     0% {
-        background-image: url(../img/brownie.png);
+        background-image: url(../assets/img/brownie.png);
     }
+
     25% {
-        background-image: url(../img/lemonPie.png);
+        background-image: url(../assets/img/lemonPie.png);
     }
+
     50% {
-        background-image: url(../img/frutilla.png);
+        background-image: url(../assets/img/frutilla.png);
     }
+
     75% {
-        background-image: url(../img/cheeseCake.png);
+        background-image: url(../assets/img/cheeseCake.png);
     }
+
     100% {
-        background-image: url(../img/brownie.png);
+        background-image: url(../assets/img/brownie.png);
     }
 }
+
 .secProd .imgProdProd3b {
     animation-name: cambio3b;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio3b {
     0% {
-        background-image: url(../img/cookies2.png);
+        background-image: url(../assets/img/cookies2.png);
     }
+
     25% {
-        background-image: url(../img/muffins.png);
+        background-image: url(../assets/img/muffins.png);
     }
+
     50% {
-        background-image: url(../img/cookies.png);
+        background-image: url(../assets/img/cookies.png);
     }
+
     75% {
-        background-image: url(../img/muffins2.png);
+        background-image: url(../assets/img/muffins2.png);
     }
+
     100% {
-        background-image: url(../img/cookies2.png);
+        background-image: url(../assets/img/cookies2.png);
     }
 }
+
 .secProd .imgProdProd3c {
     animation-name: cambio3c;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio3c {
     0% {
-        background-image: url(../img/muffins2.png);
+        background-image: url(../assets/img/muffins2.png);
     }
+
     25% {
-        background-image: url(../img/cookies2.png);
+        background-image: url(../assets/img/cookies2.png);
     }
+
     50% {
-        background-image: url(../img/muffins.png);
+        background-image: url(../assets/img/muffins.png);
     }
+
     75% {
-        background-image: url(../img/cookies.png);
+        background-image: url(../assets/img/cookies.png);
     }
+
     100% {
-        background-image: url(../img/muffins2.png);
+        background-image: url(../assets/img/muffins2.png);
     }
 }
+
 .secProd .imgProdProd3d {
     animation-name: cambio3d;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio3d {
     0% {
-        background-image: url(../img/cookies.png);
+        background-image: url(../assets/img/cookies.png);
     }
+
     25% {
-        background-image: url(../img/muffins2.png);
+        background-image: url(../assets/img/muffins2.png);
     }
+
     50% {
-        background-image: url(../img/cookies2.png);
+        background-image: url(../assets/img/cookies2.png);
     }
+
     75% {
-        background-image: url(../img/muffins.png);
+        background-image: url(../assets/img/muffins.png);
     }
+
     100% {
-        background-image: url(../img/cookies.png);
+        background-image: url(../assets/img/cookies.png);
     }
 }
+
 .secProd .imgProdProd4b {
     animation-name: cambio4b;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio4b {
     0% {
-        background-image: url(../img/alfajores4.png);
+        background-image: url(../assets/img/alfajores4.png);
     }
+
     25% {
-        background-image: url(../img/alfajores.png);
+        background-image: url(../assets/img/alfajores.png);
     }
+
     50% {
-        background-image: url(../img/alfajores2.png);
+        background-image: url(../assets/img/alfajores2.png);
     }
+
     75% {
-        background-image: url(../img/alfajores3.png);
+        background-image: url(../assets/img/alfajores3.png);
     }
+
     100% {
-        background-image: url(../img/alfajores4.png);
+        background-image: url(../assets/img/alfajores4.png);
     }
 }
+
 .secProd .imgProdProd4c {
     animation-name: cambio4c;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio4c {
     0% {
-        background-image: url(../img/alfajores3.png);
+        background-image: url(../assets/img/alfajores3.png);
     }
+
     25% {
-        background-image: url(../img/alfajores4.png);
+        background-image: url(../assets/img/alfajores4.png);
     }
+
     50% {
-        background-image: url(../img/alfajores.png);
+        background-image: url(../assets/img/alfajores.png);
     }
+
     75% {
-        background-image: url(../img/alfajores2.png);
+        background-image: url(../assets/img/alfajores2.png);
     }
+
     100% {
-        background-image: url(../img/alfajores3.png);
+        background-image: url(../assets/img/alfajores3.png);
     }
 }
+
 .secProd .imgProdProd4d {
     animation-name: cambio4d;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio4d {
     0% {
-        background-image: url(../img/alfajores2.png);
+        background-image: url(../assets/img/alfajores2.png);
     }
+
     25% {
-        background-image: url(../img/alfajores3.png);
+        background-image: url(../assets/img/alfajores3.png);
     }
+
     50% {
-        background-image: url(../img/alfajores4.png);
+        background-image: url(../assets/img/alfajores4.png);
     }
+
     75% {
-        background-image: url(../img/alfajores.png);
+        background-image: url(../assets/img/alfajores.png);
     }
+
     100% {
-        background-image: url(../img/alfajores2.png);
+        background-image: url(../assets/img/alfajores2.png);
     }
 }
 
@@ -747,69 +870,87 @@ html {
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio5b {
     0% {
-        background-image: url(../img/caja4.png);
+        background-image: url(../assets/img/caja4.png);
     }
+
     25% {
-        background-image: url(../img/cajaUno.png);
+        background-image: url(../assets/img/cajaUno.png);
     }
+
     50% {
-        background-image: url(../img/cajaDos.png);
+        background-image: url(../assets/img/cajaDos.png);
     }
+
     75% {
-        background-image: url(../img/caja3.png);
+        background-image: url(../assets/img/caja3.png);
     }
+
     100% {
-        background-image: url(../img/caja4.png);
+        background-image: url(../assets/img/caja4.png);
     }
 }
+
 .secProd .imgProdProd5c {
     animation-name: cambio5c;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio5c {
     0% {
-        background-image: url(../img/caja3.png);
+        background-image: url(../assets/img/caja3.png);
     }
+
     25% {
-        background-image: url(../img/caja4.png);
+        background-image: url(../assets/img/caja4.png);
     }
+
     50% {
-        background-image: url(../img/cajaUno.png);
+        background-image: url(../assets/img/cajaUno.png);
     }
+
     75% {
-        background-image: url(../img/cajaDos.png);
+        background-image: url(../assets/img/cajaDos.png);
     }
+
     100% {
-        background-image: url(../img/caja3.png);
+        background-image: url(../assets/img/caja3.png);
     }
 }
+
 .secProd .imgProdProd5d {
     animation-name: cambio5d;
     animation-duration: 60s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
+
 @keyframes cambio5d {
     0% {
-        background-image: url(../img/cajaDos.png);
+        background-image: url(../assets/img/cajaDos.png);
     }
+
     25% {
-        background-image: url(../img/caja3.png);
+        background-image: url(../assets/img/caja3.png);
     }
+
     50% {
-        background-image: url(../img/caja4.png);
+        background-image: url(../assets/img/caja4.png);
     }
+
     75% {
-        background-image: url(../img/cajaUno.png);
+        background-image: url(../assets/img/cajaUno.png);
     }
+
     100% {
-        background-image: url(../img/cajaDos.png);
+        background-image: url(../assets/img/cajaDos.png);
     }
 }
+
 /*-----------------fin main productos-------------------*/
 
 /*-----------------comienzo main galeria-------------------*/
@@ -820,61 +961,72 @@ html {
     padding: 20px;
     min-height: 100vh;
 }
+
 .item {
     height: 300px;
     border: 2px solid #fff;
     margin: 20px;
     box-shadow: 2px 2px 5px #333;
 }
+
 .item:hover {
     transform: scale(1.05);
     transition: all 0.7s;
 }
+
 .item1 {
-    background-image: url(../img/lemonPie.png);
+    background-image: url(../assets/img/lemonPie.png);
     background-position: center;
     background-size: cover;
 }
+
 .item2 {
-    background-image: url(../img/tortaPanda.png);
+    background-image: url(../assets/img/tortaPanda.png);
     background-position: center;
     background-size: cover;
 }
+
 .item3 {
-    background-image: url(../img/tortaGolondrinas.png);
+    background-image: url(../assets/img/tortaGolondrinas.png);
     background-position: center;
     background-size: cover;
 }
+
 .item4 {
-    background-image: url(../img/cookies.png);
+    background-image: url(../assets/img/cookies.png);
     background-position: center;
     background-size: cover;
 }
+
 .item5 {
-    background-image: url(../img/cajaUno.png);
+    background-image: url(../assets/img/cajaUno.png);
     background-position: center;
     background-size: cover;
 }
+
 .item6 {
-    background-image: url(../img/brownie.png);
+    background-image: url(../assets/img/brownie.png);
     background-position: center;
     background-size: cover;
 }
+
 .item7 {
-    background-image: url(../img/muffins.png);
+    background-image: url(../assets/img/muffins.png);
     background-position: center;
     background-size: cover;
 }
+
 .item8 {
-    background-image: url(../img/alfajores.png);
+    background-image: url(../assets/img/alfajores.png);
     background-position: center;
     background-size: cover;
 }
+
 /*-----------------fin main galeria-------------------*/
 
 /*-----------------comienzo main sobre mi-------------------*/
 .mainSobreMi {
-    background-image: url(../img/cookies.png);
+    background-image: url(../assets/img/cookies.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -882,6 +1034,7 @@ html {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .contenedorSobreMi {
     background-color: #593b63d2;
     border: #fff solid 1px;
@@ -893,16 +1046,19 @@ html {
     border-radius: 10%;
     margin: 40px 25px;
 }
+
 .contenedorSobreMi h4 {
     padding: 10px;
     font-size: 40px;
     line-height: 0.8;
 }
+
 .contenedorSobreMi h4 span {
     display: block;
     padding: 10px;
     font-size: 20px;
 }
+
 .contenedorSobreMi p {
     padding: 5px;
     font-size: 16px;
@@ -910,8 +1066,9 @@ html {
     border: #fff solid 1px;
     margin: 20px;
 }
+
 .mainSobreMi .imgSobreMi {
-    background-image: url(../img/logoVIejo.png);
+    background-image: url(../assets/img/logoVIejo.png);
     background-position: center;
     background-size: cover;
     height: 200px;
@@ -923,17 +1080,19 @@ html {
     padding: 25px;
     display: none;
 }
+
 /*-----------------fin main sobre mi-------------------*/
 
 /*-----------------comienzo main contacto-------------------*/
 .mainContacto {
-    background-image: url(../img/cookies.png);
+    background-image: url(../assets/img/cookies.png);
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .mainContacto .datos {
     height: auto;
     background-color: #23201fdc;
@@ -947,13 +1106,16 @@ html {
     justify-content: space-evenly;
     display: none;
 }
+
 .mainContacto .datos a {
     color: #fff;
     text-decoration: none;
 }
+
 .mainContacto .datos a:hover {
     color: #cd34fc
 }
+
 .contForm {
     height: auto;
     background-color: #593b639d;
@@ -966,15 +1128,18 @@ html {
     font-size: 20px;
     align-self: center;
 }
+
 .contForm .textoForm {
     margin: 5px 0px;
     padding: 5px 0px;
 }
+
 .contForm .complForm {
     margin: 5px 0px;
     padding: 5px 0px;
     width: 100%;
 }
+
 .contForm .botonEnviar {
     background-color: #511364;
     color: #fff;
@@ -982,18 +1147,22 @@ html {
     font-size: 16px;
     border: solid 2px #fff;
 }
+
 .contForm .botonEnviar:hover {
     background-color: #23201f;
     transform: scale(1.2);
 }
+
 input {
     transition: all 1s;
 }
+
 input:focus {
     font-size: 22px;
     border: 5px #511364 solid;
     color: #511364;
 }
+
 /*-----------------fin main contacto-------------------*/
 
 /*-----------------comienzo FOOTER-------------------*/
@@ -1006,6 +1175,7 @@ input:focus {
     grid-template-rows: auto 15px;
     background-color: #23201f;
 }
+
 .footer .contactoFooter {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -1018,36 +1188,45 @@ input:focus {
     align-self: center;
     padding: 5px;
 }
+
 .footer .contactoFooter {
     font-size: 16px;
     line-height: 30px;
 }
-.footer .contactoFooter h6{
+
+.footer .contactoFooter h6 {
     font-size: 18px;
 }
+
 .footer .contactoFooter p span {
     display: block;
 }
+
 .footer .redesFooter {
     font-size: 18px;
 }
-.footer .redesFooter i{
+
+.footer .redesFooter i {
     font-size: 16px;
     color: #fff;
     padding: 0px 10px;
 }
-.footer .redesFooter i:hover{
+
+.footer .redesFooter i:hover {
     color: #7c01a1;
 }
+
 .footer #copyrigth {
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: black;
     color: #fff;
 }
+
 .footer .lista {
     display: none;
 }
+
 .footer .logoFooter {
     display: none;
     font-size: 20px;
@@ -1056,34 +1235,41 @@ input:focus {
     text-align: center;
     align-self: center;
 }
+
 .lista ul {
     list-style: none;
     font-size: 0;
     align-items: center;
     color: aliceblue;
-    align-self: center;    
+    align-self: center;
 }
+
 .lista ul li a {
     text-decoration: none;
     color: aliceblue;
     font-size: 20px;
     padding: 20px;
 }
+
 .lista ul li a:hover {
     color: #cd34fc;
 }
+
 .footer .logo {
     height: 15px;
     left: 15px;
 }
+
 .footer .logoFooter p a {
     font-size: 20px;
     text-decoration: none;
     color: #fff;
 }
+
 .footer .logoFooter p a:hover {
     color: #cd34fc;
 }
+
 /*-----------------fin FOOTER-------------------*/
 
 /*---------comienzo boton subir----------------*/
@@ -1102,12 +1288,15 @@ input:focus {
     box-shadow: 0 0 5px #fff;
     z-index: 15;
 }
+
 .subir i {
     color: #fff;
 }
+
 /*---------fin boton subir----------------*/
 
 @media only screen and (min-width: 0px) and (max-width: 250px) {
+
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 350px;
@@ -1115,44 +1304,54 @@ input:focus {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr 1fr 1fr;
     }
+
     .sec h4 {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 30px;
     }
+
     .sec .imgProdIndex {
         grid-column: 1/2;
         grid-row: 2/3;
         height: 200px;
         width: 170px;
     }
+
     .sec .encargar {
         grid-column: 1/2;
         grid-row: 3/4;
         justify-self: center;
     }
+
     .sec .verMas {
         grid-column: 1/2;
         grid-row: 4/5;
         justify-self: center;
     }
+
     .boton {
         font-size: 16px;
         padding: 5px 10px;
     }
+
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo productos-------------------*/
     .secProd {
         height: 450px;
     }
+
     /*-----------------fin productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .item {
         height: 200px;
     }
+
     /*-----------------fin galeria-------------------*/
 }
+
 @media only screen and (min-width: 361px) and (max-width: 480px) {
+
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 280px;
@@ -1160,31 +1359,37 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
+
     .sec h4 {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 40px;
     }
+
     .sec .imgProdIndex {
         grid-column: 1/2;
         grid-row: 1/4;
         height: 260px;
         width: 170px;
     }
+
     .sec .encargar {
         grid-column: 2/3;
         grid-row: 2/3;
         justify-self: center;
     }
+
     .sec .verMas {
         grid-column: 2/3;
         grid-row: 3/4;
         justify-self: center;
     }
+
     .boton {
         font-size: 20px;
         padding: 5px 15px;
     }
+
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
     .secProd {
@@ -1193,78 +1398,79 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 2fr 1fr;
     }
+
     .secProd h4 {
         font-size: 30px;
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .secProd .imgProdProd {
         height: 95%;
         width: 95%;
         grid-column: 1/2;
         grid-row: 1/4;
-    }    
+    }
+
     .secProd .encargar {
         padding: 5px 20px;
         font-size: 18px;
         width: auto;
         grid-column: 2/3;
         grid-row: 3/4;
-    }   
+    }
+
     .secProd p {
         font-size: 16px;
         padding: 5px;
         grid-column: 2/3;
         grid-row: 2/3;
     }
+
     /*-----------------comienzo main productos-------------------*/
 }
+
 @media only screen and (min-width: 481px) and (max-width: 600px) {
     /*-----------------comienzo encabezado-------------------*/
-    .header .intro {
-        height: 150px;
-    }
-    .header .intro h1 {
-        font-size: 50px;
-    }
-    .header .intro h2 {
-        font-size: 40px;
-    }
-    .header .infoPedidos a{
-        font-size: 22px;
-    }
     /*-----------------fin encabezado-------------------*/
+
     /*-----------------comienzo main index-------------------*/
     .sec {
-            height: 300px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-    }     
+        height: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
     .sec h4 {
-            grid-column: 2/3;
-            grid-row: 1/2;
-            font-size: 50px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 50px;
     }
+
     .sec .imgProdIndex {
-            grid-column: 1/2;
-            grid-row: 1/4;
-            height: 280px;
-            width: 230PX;
+        grid-column: 1/2;
+        grid-row: 1/4;
+        height: 280px;
+        width: 230PX;
     }
+
     .sec .encargar {
-            grid-column: 2/3;
-            grid-row: 2/3;
-            width: auto;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        width: auto;
     }
+
     .sec .verMas {
-            grid-column: 2/3;
-            grid-row: 3/4;
+        grid-column: 2/3;
+        grid-row: 3/4;
     }
+
     .boton {
-            font-size: 25px;
-            padding: 5px 15px;
+        font-size: 25px;
+        padding: 5px 15px;
     }
+
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
     .secProd {
@@ -1273,98 +1479,73 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 2fr 1fr;
     }
+
     .secProd h4 {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 40px;
     }
+
     .secProd .imgProdProd {
         height: 280px;
         width: 230px;
         grid-column: 1/2;
         grid-row: 1/4;
     }
+
     .secProd p {
         font-size: 16px;
         padding: 10px 20px;
         grid-column: 2/3;
         grid-row: 2/3;
-    }    
+    }
+
     .secProd .encargar {
         padding: 10px 30px;
         font-size: 20px;
         width: auto;
         grid-column: 2/3;
         grid-row: 3/4;
-    }   
+    }
+
     /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
     .galeria .item {
         height: 300px;
     }
+
     /*-----------------fin galeria-------------------*/
     /*-----------------comienzo main sobre mi-------------------*/
     .contenedorSobreMi {
         height: 450px;
     }
+
     .contenedorSobreMi h4 {
         font-size: 40px;
         line-height: 1.1;
     }
+
     .contenedorSobreMi h4 span {
         font-size: 24px;
     }
+
     .contenedorSobreMi p {
         padding: 20px;
         font-size: 18px;
     }
+
     /*-----------------fin main sobre mi-------------------*/
 }
+
 @media only screen and (min-width: 601px) and (max-width: 840px) {
     /*-----------------comienzo encabezado-------------------*/
-    .header .barra {
-        height: 100px;
-    }
-    .header .barra .logo {
-        height: 70px;
-        width: 70px;
-        margin: 15px 25px;
-    }
-    .header .iconoNav i {
-        margin: 25px 20px;
-        padding: 10px;
-        font-size: 30px;
-    }
-    .header .intro {
-        height: 150px;
-        position: relative;
-        top: 100px;
-    }
-    .header .intro h1 {
-        font-size: 50px;
-    }
-    .header .intro h2 {
-        font-size: 40px;
-    }
-    .header .intro span {
-        font-size: 20px;
-    }
-    .header .infoPedidos {
-        position: relative; /* position: sticky;*/
-        top: 100px;
-    }
-    .header .infoPedidos a{
-        font-size: 26px;
-    }
     /*-----------------fin encabezado-------------------*/
-    .main {
-        position: relative;
-        top: 100px;
-    }
+
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 400px;
@@ -1372,33 +1553,39 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr 1fr;
     }
+
     .sec h4 {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 80px;
         margin: 50px 0px;
     }
+
     .sec .imgProdIndex {
         grid-column: 1/2;
         grid-row: 1/4;
         height: 380px;
         width: 280px;
     }
+
     .sec .encargar {
         grid-column: 2/3;
         grid-row: 2/3;
         justify-self: center;
     }
+
     .sec .verMas {
         grid-column: 2/3;
         grid-row: 3/4;
         justify-self: center;
     }
+
     .boton {
         font-size: 25px;
         padding: 10px 25px;
         width: auto;
     }
+
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
     .secProd {
@@ -1407,31 +1594,36 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 2fr 1fr;
     }
+
     .secProd h4 {
         font-size: 60px;
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .secProd .imgProdProd {
         height: 380px;
         width: 280px;
         grid-column: 1/2;
         grid-row: 1/4;
-    }    
+    }
+
     .secProd .encargar {
         padding: 10px 30px;
         font-size: 30px;
         width: auto;
         grid-column: 2/3;
         grid-row: 3/4;
-    }   
+    }
+
     .secProd p {
         font-size: 18px;
         padding: 10px 20px;
         grid-column: 2/3;
         grid-row: 2/3;
     }
-    /*-----------------comienzo main productos-------------------*/   
+
+    /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo main galeria-------------------*/
     .galeria {
         display: grid;
@@ -1441,6 +1633,7 @@ input:focus {
     .galeria .item {
         height: 300px;
     }
+
     /*-----------------fin main galeria-------------------*/
     /*-----------------comienzo main sobre mi-------------------*/
     .mainSobreMi .contenedorSobreMi {
@@ -1450,17 +1643,20 @@ input:focus {
         height: 550px;
         width: 95%;
     }
-    .mainSobreMi .tituloSobreMi{
+
+    .mainSobreMi .tituloSobreMi {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 40px;
         align-self: end;
         line-height: 1.3;
     }
+
     .mainSobreMi .tituloSobreMi span {
         font-size: 20px;
     }
-    .mainSobreMi .textoSobreMi{
+
+    .mainSobreMi .textoSobreMi {
         grid-column: 1/2;
         grid-row: 2/3;
         align-self: center;
@@ -1469,7 +1665,8 @@ input:focus {
         margin: 15px;
         line-height: 1.6;
     }
-    .mainSobreMi .imgSobreMi{
+
+    .mainSobreMi .imgSobreMi {
         grid-column: 2/3;
         grid-row: 1/3;
         display: grid;
@@ -1477,6 +1674,7 @@ input:focus {
         width: auto;
         margin: 15px;
     }
+
     /*-----------------comienzo fin sobre mi-------------------*/
     /*-----------------comienzo main contacto-------------------*/
     .mainContacto .datos {
@@ -1489,12 +1687,14 @@ input:focus {
         text-align: center;
         margin: 80px 20px;
     }
+
     .contForm {
         height: 400px;
         width: 40%;
         font-size: 20px;
     }
-    /*-----------------comienzo fin contacto-------------------*/ 
+
+    /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
         position: relative;
@@ -1504,6 +1704,7 @@ input:focus {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto 15px;
     }
+
     .footer .contactoFooter {
         grid-column: 3/4;
         grid-row: 1/2;
@@ -1511,85 +1712,55 @@ input:focus {
         display: flex;
         flex-direction: column;
     }
+
     .footer .contactoFooter {
         font-size: 16px;
     }
-    .footer .contactoFooter h6{
+
+    .footer .contactoFooter h6 {
         font-size: 24px;
     }
+
     .footer .contactoFooter .contac p span {
         display: inline;
     }
+
     .footer .redesFooter {
         font-size: 18px;
     }
-    .footer .redesFooter i{
+
+    .footer .redesFooter i {
         letter-spacing: 15px;
         font-size: 16px;
     }
+
     .footer .lista {
         display: contents;
         font-size: 16px;
     }
+
     .footer .lista .prod {
         grid-column: 1/2;
         grid-row: 1/2;
     }
+
     .footer .lista .nav {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .footer #copyrigth {
         grid-column: 1/4;
         grid-row: 2/3;
     }
+
     /*-----------------fin footer-------------------*/
 }
+
 @media only screen and (min-width: 841px) and (max-width: 1023px) {
     /*----------------comienzo encabezado---------------------*/
-    .header .barra {
-        height: 100px;
-    }
-    .header .barra .logo {
-        height: 70px;
-        width: 70px;
-        margin: 15px 25px;
-    }
-    .header .iconoNav {
-        display: none;
-    }
-    .header .menu {
-        display: contents;
-    }
-    .header .redes {
-        display: contents;
-    }
-    .header .intro {
-        height: 200px;
-        position: relative;
-        top: 100px;
-    }
-    .header .intro h1 {
-        font-size: 70px;
-    }
-    .header .intro h2 {
-        font-size: 50px;
-    }
-    .header .intro span {
-        font-size: 20px;
-    }
-    .header .infoPedidos {
-        position: relative; /* position: sticky;*/
-        top: 100px;
-    }
-    .header .infoPedidos a{
-        font-size: 26px;
-    }
     /*----------------fin encabezado--------------------------*/
-    .main {
-        position: relative;
-        top: 100px;
-    }
+
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 450px;
@@ -1597,32 +1768,38 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr 1fr;
     }
+
     .sec h4 {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 100px;
     }
+
     .sec .imgProdIndex {
         grid-column: 1/2;
         grid-row: 1/4;
         height: 400px;
         width: 370px;
     }
+
     .sec .encargar {
         grid-column: 2/3;
         grid-row: 2/3;
         justify-self: center;
     }
+
     .sec .verMas {
         grid-column: 2/3;
         grid-row: 3/4;
         justify-self: center;
     }
+
     .boton {
         font-size: 30px;
         padding: 10px 25px;
         width: auto;
     }
+
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
     .secProd {
@@ -1633,17 +1810,20 @@ input:focus {
         justify-items: center;
         align-items: center;
     }
+
     .secProd h4 {
         font-size: 50px;
         grid-column: 3/4;
         grid-row: 1/2;
     }
+
     .secProd .imgProdProd {
         height: 95%;
         width: 95%;
         grid-column: 1/2;
         grid-row: 1/4;
     }
+
     .secProd .fotoOculta {
         display: grid;
         height: 85%;
@@ -1651,18 +1831,22 @@ input:focus {
         background-position: center;
         background-size: cover;
     }
-    .secProd .fotoOculta1{
+
+    .secProd .fotoOculta1 {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .secProd .fotoOculta2 {
         grid-column: 2/3;
         grid-row: 2/3;
     }
+
     .secProd .fotoOculta3 {
         grid-column: 2/3;
         grid-row: 3/4;
     }
+
     .secProd .encargar {
         padding: 10px 30px;
         font-size: 25px;
@@ -1670,13 +1854,15 @@ input:focus {
         grid-column: 3/4;
         grid-row: 3/4;
     }
+
     .secProd p {
         font-size: 18px;
         padding: 10px 20px;
         grid-column: 3/4;
         grid-row: 2/3;
     }
-    /*-----------------comienzo main productos-------------------*/        
+
+    /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
         display: grid;
@@ -1691,17 +1877,21 @@ input:focus {
         grid-column: 1/3;
         grid-row: 1/2;
     }
+
     .item4 {
         grid-column: 2/4;
         grid-row: 2/3;
     }
+
     .item5 {
         grid-column: 1/3;
         grid-row: 3/4;
     }
+
     .item8 {
         grid-column: 2/4;
     }
+
     /*-----------------fin galeria-------------------*/
     /*-----------------comienzo main sobre mi-------------------*/
     .mainSobreMi .contenedorSobreMi {
@@ -1711,20 +1901,23 @@ input:focus {
         height: 600px;
         width: 80%;
     }
-    .mainSobreMi .tituloSobreMi{
+
+    .mainSobreMi .tituloSobreMi {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 60px;
         align-self: end;
         line-height: 1.3;
     }
+
     .mainSobreMi .tituloSobreMi span {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 30px;
         align-self: end;
     }
-    .mainSobreMi .textoSobreMi{
+
+    .mainSobreMi .textoSobreMi {
         grid-column: 1/2;
         grid-row: 2/3;
         align-self: center;
@@ -1732,7 +1925,8 @@ input:focus {
         padding: 15px;
         line-height: 1.3;
     }
-    .mainSobreMi .imgSobreMi{
+
+    .mainSobreMi .imgSobreMi {
         grid-column: 2/3;
         grid-row: 1/3;
         display: grid;
@@ -1740,6 +1934,7 @@ input:focus {
         width: auto;
         margin: 20px;
     }
+
     /*-----------------comienzo fin sobre mi-------------------*/
     /*-----------------comienzo main contacto-------------------*/
     .mainContacto .datos {
@@ -1752,12 +1947,14 @@ input:focus {
         text-align: center;
         margin: 80px 20px;
     }
+
     .contForm {
         height: 450px;
         width: 40%;
         font-size: 25px;
     }
-    /*-----------------comienzo fin contacto-------------------*/    
+
+    /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
         position: relative;
@@ -1767,18 +1964,22 @@ input:focus {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto 15px;
     }
+
     .footer .lista {
         display: contents;
         font-size: 16px;
     }
+
     .footer .lista .prod {
         grid-column: 1/2;
         grid-row: 1/2;
     }
+
     .footer .lista .nav {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .footer .contactoFooter {
         grid-column: 3/4;
         grid-row: 1/2;
@@ -1786,73 +1987,36 @@ input:focus {
         display: flex;
         flex-direction: column;
     }
-    .footer .contactoFooter h6{
+
+    .footer .contactoFooter h6 {
         font-size: 25px;
     }
+
     .footer .contactoFooter p span {
         display: inline;
     }
+
     .footer .redesFooter {
         font-size: 20px;
     }
-    .footer .redesFooter i{
+
+    .footer .redesFooter i {
         letter-spacing: 15px;
         font-size: 20px;
     }
+
     .footer #copyrigth {
         grid-column: 1/4;
         grid-row: 2/3;
     }
-    /*-----------------fin footer-------------------*/    
+
+    /*-----------------fin footer-------------------*/
 }
+
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
     /*----------------comienzo encabezado---------------------*/
-    .header .barra {
-        height: 100px;
-    }
-    .header .barra .logo {
-        height: 70px;
-        width: 70px;
-        margin: 15px 25px;
-    }
-    .header .iconoNav {
-        display: none;
-    }
-    .header .menu {
-        display: contents;
-    }
-    .header .redes {
-        display: contents;
-    }
-    .header .intro {
-        height: 200px;
-        position: relative;
-        top: 100px;
-    }
-    .header .intro h1 {
-        font-size: 70px;
-    }
-    .header .intro h2 {
-        font-size: 50px;
-    }
-    .header .intro span {
-        font-size: 20px;
-    }
-    .header .infoPedidos {
-        position: relative; /* position: sticky;*/
-        top: 100px;
-    }
-    .header .infoPedidos a{
-        font-size: 26px;
-    }
-    .header .infoPedidos span{
-        display: inline;
-    }
     /*----------------fin encabezado--------------------------*/
-    .main {
-        position: relative;
-        top: 100px;
-    }
+
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 500px;
@@ -1860,34 +2024,40 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr 1fr;
     }
+
     .sec h4 {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 120px;
     }
+
     .sec .imgProdIndex {
         grid-column: 1/2;
         grid-row: 1/4;
         height: 450px;
         width: 400px;
     }
+
     .sec .encargar {
         grid-column: 2/3;
         grid-row: 2/3;
         justify-self: center;
     }
+
     .sec .verMas {
         grid-column: 2/3;
         grid-row: 3/4;
         justify-self: center;
     }
+
     .boton {
         font-size: 40px;
         padding: 10px 25px;
         width: auto;
     }
+
     /*-----------------fin main index-------------------*/
-    /*-----------------comienzo main productos-------------------*/ 
+    /*-----------------comienzo main productos-------------------*/
     .secProd {
         width: 100%;
         height: 500px;
@@ -1896,17 +2066,20 @@ input:focus {
         justify-items: center;
         align-items: center;
     }
+
     .secProd h4 {
         font-size: 80px;
         grid-column: 3/4;
         grid-row: 1/2;
     }
+
     .secProd .imgProdProd {
         height: 95%;
         width: 95%;
         grid-column: 1/2;
         grid-row: 1/4;
     }
+
     .secProd .fotoOculta {
         display: grid;
         height: 85%;
@@ -1914,24 +2087,30 @@ input:focus {
         background-position: center;
         background-size: cover;
     }
-    .secProd .fotoOculta1{
+
+    .secProd .fotoOculta1 {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .secProd .fotoOculta2 {
         grid-column: 2/3;
         grid-row: 2/3;
     }
+
     .secProd .fotoOculta3 {
         grid-column: 2/3;
         grid-row: 3/4;
     }
+
     .secProd .imgProdProd1b {
         background-image: url(../img/tortaCeleste.png);
     }
+
     .secProd .imgProdProd1c {
         background-image: url(../img/tortaGolondrinas.png);
     }
+
     .secProd .imgProdProd1d {
         background-image: url(../img/tortaChop.png);
     }
@@ -1939,9 +2118,11 @@ input:focus {
     .secProd .imgProdProd2b {
         background-image: url(../img/brownie.png);
     }
+
     .secProd .imgProdProd2c {
         background-image: url(../img/lemonPie.png);
     }
+
     .secProd .imgProdProd2d {
         background-image: url(../img/frutilla.png);
     }
@@ -1949,9 +2130,11 @@ input:focus {
     .secProd .imgProdProd3b {
         background-image: url(../img/cookies.png);
     }
+
     .secProd .imgProdProd3c {
         background-image: url(../img/muffins2.png);
     }
+
     .secProd .imgProdProd3d {
         background-image: url(../img/cookies2.png);
     }
@@ -1959,9 +2142,11 @@ input:focus {
     .secProd .imgProdProd4b {
         background-image: url(../img/alfajores2.png);
     }
+
     .secProd .imgProdProd4c {
         background-image: url(../img/alfajores3.png);
     }
+
     .secProd .imgProdProd4d {
         background-image: url(../img/alfajores4.png);
     }
@@ -1969,34 +2154,41 @@ input:focus {
     .secProd .imgProdProd5b {
         background-image: url(../img/cajaDos.png);
     }
+
     .secProd .imgProdProd5c {
         background-image: url(../img/caja3.png);
     }
+
     .secProd .imgProdProd5d {
         background-image: url(../img/caja4.png);
     }
+
     .secProd p {
         font-size: 25px;
         padding: 10px 20px;
         grid-column: 3/4;
         grid-row: 2/3;
     }
+
     .secProd .encargar {
         padding: 10px 30px;
         font-size: 30px;
         width: auto;
         grid-column: 3/4;
         grid-row: 3/4;
-    }   
-    /*-----------------comienzo main productos-------------------*/    
+    }
+
+    /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+
     .galeria .item {
         height: 360px;
     }
+
     /*-----------------fin galeria-------------------*/
     /*-----------------comienzo main sobre mi-------------------*/
     .mainSobreMi .contenedorSobreMi {
@@ -2006,20 +2198,23 @@ input:focus {
         height: 700px;
         width: 80%;
     }
-    .mainSobreMi .tituloSobreMi{
+
+    .mainSobreMi .tituloSobreMi {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 70px;
         align-self: end;
         line-height: 1.3;
     }
+
     .mainSobreMi .tituloSobreMi span {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 30px;
         align-self: end;
     }
-    .mainSobreMi .textoSobreMi{
+
+    .mainSobreMi .textoSobreMi {
         grid-column: 1/2;
         grid-row: 2/3;
         align-self: center;
@@ -2028,7 +2223,8 @@ input:focus {
         margin: 30px;
         line-height: 1.4;
     }
-    .mainSobreMi .imgSobreMi{
+
+    .mainSobreMi .imgSobreMi {
         grid-column: 2/3;
         grid-row: 1/3;
         display: grid;
@@ -2036,6 +2232,7 @@ input:focus {
         width: auto;
         margin: 20px;
     }
+
     /*-----------------comienzo fin sobre mi-------------------*/
     /*-----------------comienzo main contacto-------------------*/
     .mainContacto .datos {
@@ -2048,11 +2245,13 @@ input:focus {
         text-align: center;
         margin: 80px 20px;
     }
+
     .contForm {
         height: 450px;
         width: 40%;
         font-size: 25px;
     }
+
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
@@ -2060,21 +2259,25 @@ input:focus {
         top: 100px;
         min-height: 200px;
         display: grid;
-        grid-template-columns:  1fr 1fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
         grid-template-rows: auto 15px;
     }
+
     .footer .lista {
         display: contents;
         font-size: 16px;
     }
+
     .footer .lista .prod {
         grid-column: 1/2;
         grid-row: 1/2;
     }
+
     .footer .lista .nav {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .footer .logoFooter {
         display: contents;
         display: flex;
@@ -2084,13 +2287,16 @@ input:focus {
         justify-self: center;
         align-self: center;
     }
-    .footer .logoFooter h6{
+
+    .footer .logoFooter h6 {
         font-size: 35px;
     }
-    .logoFooter img{
+
+    .logoFooter img {
         height: 40px;
         width: 40px;
     }
+
     .footer .contactoFooter {
         grid-column: 4/5;
         grid-row: 1/2;
@@ -2098,73 +2304,36 @@ input:focus {
         display: flex;
         flex-direction: column;
     }
-    .footer .contactoFooter h6{
+
+    .footer .contactoFooter h6 {
         font-size: 28px;
     }
+
     .footer .contactoFooter p span {
         display: inline;
     }
+
     .footer .redesFooter {
         font-size: 22px;
     }
-    .footer .redesFooter i{
+
+    .footer .redesFooter i {
         letter-spacing: 15px;
         font-size: 20px;
     }
+
     .footer #copyrigth {
         grid-column: 1/5;
         grid-row: 2/3;
     }
+
     /*-----------------fin footer-------------------*/
 }
+
 @media only screen and (min-width: 1200px) {
     /*----------------comienzo encabezado---------------------*/
-    .header .barra {
-        height: 100px;
-    }
-    .header .barra .logo {
-        height: 70px;
-        width: 70px;
-        margin: 15px 25px;
-    }
-    .header .iconoNav {
-        display: none;
-    }
-    .header .menu {
-        display: contents;
-    }
-    .header .redes {
-        display: contents;
-    }
-    .header .intro {
-        height: 250px;
-        position: relative;
-        top: 100px;
-    }
-    .header .intro h1 {
-        font-size: 70px;
-    }
-    .header .intro h2 {
-        font-size: 50px;
-    }
-    .header .intro span {
-        font-size: 20px;
-    }
-    .header .infoPedidos {
-        position: relative; /* position: sticky;*/
-        top: 100px;
-    }
-    .header .infoPedidos a{
-        font-size: 30px;
-    }
-    .header .infoPedidos span {
-        display: inline;
-    }
     /*----------------fin encabezado--------------------------*/
-    .main {
-        position: relative;
-        top: 100px;
-    }
+
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 750px;
@@ -2172,34 +2341,40 @@ input:focus {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr 1fr;
     }
+
     .sec h4 {
         grid-column: 2/3;
         grid-row: 1/2;
         font-size: 150px;
     }
+
     .sec .imgProdIndex {
         grid-column: 1/2;
         grid-row: 1/4;
         height: 600px;
         width: 540px;
     }
+
     .sec .encargar {
         grid-column: 2/3;
         grid-row: 2/3;
         justify-self: center;
     }
+
     .sec .verMas {
         grid-column: 2/3;
         grid-row: 3/4;
         justify-self: center;
     }
+
     .boton {
         font-size: 50px;
         padding: 10px 25px;
         width: auto;
     }
-    /*-----------------fin main index-------------------*/     
-    /*-----------------comienzo main productos-------------------*/  
+
+    /*-----------------fin main index-------------------*/
+    /*-----------------comienzo main productos-------------------*/
     .secProd {
         width: 100%;
         height: 750px;
@@ -2208,17 +2383,20 @@ input:focus {
         justify-items: center;
         align-items: center;
     }
+
     .secProd h4 {
         font-size: 90px;
         grid-column: 3/4;
         grid-row: 1/2;
     }
+
     .secProd .imgProdProd {
         height: 95%;
         width: 95%;
         grid-column: 1/2;
         grid-row: 1/4;
     }
+
     .secProd .fotoOculta {
         display: grid;
         height: 85%;
@@ -2226,24 +2404,30 @@ input:focus {
         background-position: center;
         background-size: cover;
     }
-    .secProd .fotoOculta1{
+
+    .secProd .fotoOculta1 {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .secProd .fotoOculta2 {
         grid-column: 2/3;
         grid-row: 2/3;
     }
+
     .secProd .fotoOculta3 {
         grid-column: 2/3;
         grid-row: 3/4;
     }
+
     .secProd .imgProdProd1b {
         background-image: url(../img/tortaCeleste.png);
     }
+
     .secProd .imgProdProd1c {
         background-image: url(../img/tortaGolondrinas.png);
     }
+
     .secProd .imgProdProd1d {
         background-image: url(../img/tortaChop.png);
     }
@@ -2251,9 +2435,11 @@ input:focus {
     .secProd .imgProdProd2b {
         background-image: url(../img/brownie.png);
     }
+
     .secProd .imgProdProd2c {
         background-image: url(../img/lemonPie.png);
     }
+
     .secProd .imgProdProd2d {
         background-image: url(../img/frutilla.png);
     }
@@ -2261,9 +2447,11 @@ input:focus {
     .secProd .imgProdProd3b {
         background-image: url(../img/cookies.png);
     }
+
     .secProd .imgProdProd3c {
         background-image: url(../img/muffins2.png);
     }
+
     .secProd .imgProdProd3d {
         background-image: url(../img/cookies2.png);
     }
@@ -2271,9 +2459,11 @@ input:focus {
     .secProd .imgProdProd4b {
         background-image: url(../img/alfajores2.png);
     }
+
     .secProd .imgProdProd4c {
         background-image: url(../img/alfajores3.png);
     }
+
     .secProd .imgProdProd4d {
         background-image: url(../img/alfajores4.png);
     }
@@ -2281,18 +2471,22 @@ input:focus {
     .secProd .imgProdProd5b {
         background-image: url(../img/cajaDos.png);
     }
+
     .secProd .imgProdProd5c {
         background-image: url(../img/caja3.png);
     }
+
     .secProd .imgProdProd5d {
         background-image: url(../img/caja4.png);
     }
+
     .secProd p {
         font-size: 30px;
         padding: 10px 20px;
         grid-column: 3/4;
         grid-row: 2/3;
     }
+
     .secProd .encargar {
         padding: 15px 35px;
         font-size: 40px;
@@ -2300,15 +2494,18 @@ input:focus {
         grid-column: 3/4;
         grid-row: 3/4;
     }
+
     /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+
     .item {
         height: 400px;
     }
+
     /*-----------------fin galeria-------------------*/
     /*-----------------comienzo main sobre mi-------------------*/
     .mainSobreMi .contenedorSobreMi {
@@ -2318,20 +2515,23 @@ input:focus {
         height: 800px;
         width: 60%;
     }
-    .mainSobreMi .tituloSobreMi{
+
+    .mainSobreMi .tituloSobreMi {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 60px;
         align-self: end;
         line-height: 1.3;
     }
+
     .mainSobreMi .tituloSobreMi span {
         grid-column: 1/2;
         grid-row: 1/2;
         font-size: 25px;
         align-self: end;
     }
-    .mainSobreMi .textoSobreMi{
+
+    .mainSobreMi .textoSobreMi {
         grid-column: 1/2;
         grid-row: 2/3;
         align-self: center;
@@ -2341,7 +2541,8 @@ input:focus {
         line-height: 1.5;
         height: auto;
     }
-    .mainSobreMi .imgSobreMi{
+
+    .mainSobreMi .imgSobreMi {
         grid-column: 2/3;
         grid-row: 1/3;
         display: grid;
@@ -2349,6 +2550,7 @@ input:focus {
         width: auto;
         margin: 40px;
     }
+
     /*-----------------comienzo fin sobre mi-------------------*/
     /*-----------------comienzo main contacto-------------------*/
     .mainContacto .datos {
@@ -2361,11 +2563,13 @@ input:focus {
         text-align: center;
         margin: 80px 20px;
     }
+
     .contForm {
         height: 60vh;
         width: 35%;
         font-size: 25px;
     }
+
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
@@ -2373,21 +2577,25 @@ input:focus {
         top: 100px;
         min-height: 200px;
         display: grid;
-        grid-template-columns:  1fr 1fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
         grid-template-rows: auto 15px;
     }
+
     .footer .lista {
         display: contents;
         font-size: 16px;
     }
+
     .footer .lista .prod {
         grid-column: 1/2;
         grid-row: 1/2;
     }
+
     .footer .lista .nav {
         grid-column: 2/3;
         grid-row: 1/2;
     }
+
     .footer .logoFooter {
         display: contents;
         display: flex;
@@ -2397,13 +2605,16 @@ input:focus {
         justify-self: center;
         align-self: center;
     }
-    .footer .logoFooter h6{
+
+    .footer .logoFooter h6 {
         font-size: 40px;
     }
-    .logoFooter img{
+
+    .logoFooter img {
         height: 40px;
         width: 40px;
     }
+
     .footer .contactoFooter {
         grid-column: 4/5;
         grid-row: 1/2;
@@ -2411,24 +2622,30 @@ input:focus {
         display: flex;
         flex-direction: column;
     }
-    .footer .contactoFooter h6{
+
+    .footer .contactoFooter h6 {
         font-size: 30px;
     }
+
     .footer .contactoFooter p span {
         display: inline;
     }
+
     .footer .redesFooter {
         font-size: 22px;
     }
-    .footer .redesFooter i{
+
+    .footer .redesFooter i {
         letter-spacing: 15px;
         font-size: 20px;
     }
+
     .footer #copyrigth {
         grid-column: 1/5;
         grid-row: 2/3;
     }
-    /*-----------------fin footer-------------------*/  
+
+    /*-----------------fin footer-------------------*/
 }
 
 /*---------FALTA------------------
@@ -2442,3 +2659,86 @@ LO CAMBIÉ A RELATIVE PARA QUE SE VEA BIEN
 
 - Enlazar bien el submenú de productos
 -----------FALTA-------------------*/
+@media only screen and (min-width: 768px) {
+    /*----------------comienzo encabezado---------------------*/
+    .navbar {
+        font-size: 1.5rem;
+    }
+    .navbar-expand-md .submenuProd {
+        position: absolute;
+        display: none;
+        padding: 0;
+    }
+    .navbar-expand-md .submenuProd .submenu-item {
+        display: block;
+        padding: 0;
+        color: #4b0303;
+        padding: 5px;
+    }
+    .navbar-expand-md .submenuProd .submenu-item a {
+        padding: 5px;
+    }
+    .navbar-expand-md ul li:hover ul {
+        display: block;
+        background-color: #afaeae;
+        border: #4b0303 solid 3px;
+        justify-items: center;
+    }
+    .jumbotron {
+        min-height: 40vh;
+    }
+    .jumbotron .container {
+        max-width: 40%;
+    }
+    .jumbotron h1 {
+        font-size: 2.5rem;
+        /*cambiar en resolución <310px*/
+    }
+    .jumbotron p {
+        font-size: 2rem;
+    }
+    .jumbotron .redes a {
+        color: #fff;
+        font-size: 2rem;
+        letter-spacing: 20px;
+    }
+    .jumbotron .redes a:hover {
+        color: #881c1c;
+        font-size: 2.5rem;
+    }
+    .jumbotron button {
+        font-size: 1.5rem;
+    }
+    .infoPedidos {
+        font-size: 2.5rem;
+    }
+    /*----------------fin encabezado--------------------------*/
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /*----------------comienzo encabezado---------------------*/
+    .logo {
+        width: 6rem;
+        margin: 10%;
+    }
+    .navbar-brand h2{
+        font-size: 3rem;
+        margin: 10px 5px;
+    }
+    .navbar-brand h2 span{
+        display: block;
+        padding-left: 25px;
+    }
+    .jumbotron {
+        min-height: 60vh;
+    }
+    .jumbotron .container {
+        max-width: 25%;
+    }
+    .infoPedidos {
+        font-size: 3rem;
+        border: #881c1c solid 3px;
+    }
+    /*----------------fin encabezado--------------------------*/
+}

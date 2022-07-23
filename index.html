@@ -1,101 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/estilos.css">
     <title>Cosas Ricas Venado Tuerto</title>
 </head>
+
 <body>
-    <header class="header">
-        <nav class="barra">
-            <a href="index.html" class="logo"></a>
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/productos.html">Productos<i class="fa-solid fa-angle-down"></i></a>
-                        <ul>
-                            <li><a href="pages/productos.html">Tortas</a></li> <!--ver como enlazar a la seccion especifica de Tortas (en pagina producto)-->
-                            <li><a href="pages/productos.html">Postres</a></li>  <!--ver como enlazar a la seccion especifica de Postres (en pagina producto)-->
-                            <li><a href="pages/productos.html">Muffins y cookies</a></li> <!--ver como enlazar a la seccion especifica de Muffins (en pagina producto)-->
-                            <li><a href="pages/productos.html">Alfajores</a></li> <!--ver como enlazar a la seccion especifica de Alfajores (en pagina producto)-->
-                            <li><a href="pages/productos.html">Cajas dulces</a></li> <!--ver como enlazar a la seccion especifica de Cajas dulces (en pagina producto)-->
+    <header>
+        <!-- barra inicio -->
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/img/logo.jpg" alt="logo" class="logo"><h2>Cosas <span>Ricas</span></h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="./pages/productos.html">Productos<i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="navbar-nav submenuProd">
+                            <li class="nav-item"><a class="dropdown-item submenu-item" href="./pages/productos.html#tortas">Tortas</a></li>
+                            <li class="nav-item"><a class="dropdown-item submenu-item" href="./pages/productos.html#postres">Postres</a></li>
+                            <li class="nav-item"><a class="dropdown-item submenu-item" href="./pages/productos.html#muffins">Muffins y cookies</a></li>
+                            <li class="nav-item"><a class="dropdown-item submenu-item" href="./pages/productos.html#alfajores">Alfajores</a></li>
+                            <li class="nav-item"><a class="dropdown-item submenu-item" href="./pages/productos.html#cajasDulces">Cajas dulces</a></li>
                         </ul>
                     </li>
-                    <li><a href="pages/galeria.html">Galería</a></li>
-                    <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
-                    <li><a href="pages/contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="iconoNav">
-                <i class="fa-solid fa-bars">
-                    <ul class="barraEnIcono">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="pages/productos.html">Productos<i class="fa-solid fa-angle-down"></i></a>
-                            <ul>
-                                <li><a href="">Tortas</a></li> <!--ver como enlazar a la seccion especifica de Tortas (en pagina producto)-->
-                                <li><a href="">Postres</a></li>  <!--ver como enlazar a la seccion especifica de Postres (en pagina producto)-->
-                                <li><a href="">Muffins y cookies</a></li>  <!--ver como enlazar a la seccion especifica de Muffins (en pagina producto)-->
-                                <li><a href="">Alfajores</a></li> <!--ver como enlazar a la seccion especifica de Alfajores (en pagina producto)-->
-                                <li><a href="">Cajas dulces</a></li> <!--ver como enlazar a la seccion especifica de Cajas dulces (en pagina producto)-->
-                            </ul>
-                        </li>
-                        <li><a href="pages/galeria.html">Galería</a></li>
-                        <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
-                        <li><a href="pages/contacto.html">Contacto</a></li>
-                    </ul>   
-                </i>
-            </div>
-            <div class="redes">
-                <ul>
-                    <li><a href="https://www.instagram.com/cosasricasvt/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/cosasricasvt"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>   <!--FALTA ENLAZAR-->
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="./pages/galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="./pages/sobre-mi.html">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item redesNav">
+                        <a href="https://www.instagram.com/cosasricasvt/"><i class="fa-brands fa-instagram redesNav-item"></i></a>
+                        <a href="https://www.facebook.com/cosasricasvt"><i class="fa-brands fa-facebook-f redesNav-item"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp redesNav-item"></i></a>
+                    </li>
                 </ul>
             </div>
         </nav>
-        <div class="intro">
-            <h1>Cosas Ricas <span>de ANAHÍ ASTUDILLO</span></h1>
+        <!-- barra fin -->
+    
+        <!-- jumbotron inicio -->
+        <div class="jumbotron jumbotron-fluid jumbotron-index">
+            <div class="container">
+                <h1>Endulzando los días de Venado Tuerto</h1>
+                <p>Encontranos en nuestras redes:</p>
+                <div class="redes">
+                    <a href="https://www.instagram.com/cosasricasvt/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/cosasricasvt"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <a href="./pages/productos.html"><button type="button" class="btn btn-success">Ver productos</button></a>
+            </div>
         </div>
-        <div class="infoPedidos">
-            <a href="pages/contacto.html"><P>Pedidos por encargue con 48hs de anticipación. <span>Envíos por cadete o para retirar</span></P></a>    
-        </div>
+        <!-- jumbotron fin -->
 
+        <!-- sticky info pedidos inicio -->
+        <div class="infoPedidos">
+            <a href="./pages/contacto.html"><P>Pedidos por encargue con 48hs de anticipación. <span>Envíos por cadete o para retirar</span></P></a>    
+        </div>
+        <!-- sticky info pedidos fin -->
     </header>
+
     <main class="main">
         <section class="sec">
             <h4>Tortas</h4>
             <div class="imgProdIndex imgProdIndex1"></div>
-            <a href="pages/contacto.html" class="boton encargar">Encargar</a>
-            <a href="pages/productos.html" class="boton verMas">Ver más</a> <!--ver como enlazar a la seccion especifica de Tortas (en pagina producto)-->
+            <a href="./pages/contacto.html" class="boton encargar">Encargar</a>
+            <a href="./pages/productos.html" class="boton verMas">Ver más</a>
+            <!--ver como enlazar a la seccion especifica de Tortas (en pagina producto)-->
         </section>
         <section class="sec">
             <h4>Postres</h4>
             <div class="imgProdIndex imgProdIndex2"></div>
-            <a href="pages/contacto.html" class="boton encargar">Encargar</a>
-            <a href="pages/productos.html" class="boton verMas">Ver más</a> <!--ver como enlazar a la seccion especifica de Postres (en pagina producto)-->
+            <a href="./pages/contacto.html" class="boton encargar">Encargar</a>
+            <a href="./pages/productos.html" class="boton verMas">Ver más</a>
+            <!--ver como enlazar a la seccion especifica de Postres (en pagina producto)-->
         </section>
         <section class="sec">
             <h4>Muffins</h4>
             <div class="imgProdIndex imgProdIndex3"></div>
-            <a href="pages/contacto.html" class="boton encargar">Encargar</a>
-            <a href="pages/productos.html" class="boton verMas">Ver más</a> <!--ver como enlazar a la seccion especifica de Muffins (en pagina producto)-->
+            <a href="./pages/contacto.html" class="boton encargar">Encargar</a>
+            <a href="./pages/productos.html" class="boton verMas">Ver más</a>
+            <!--ver como enlazar a la seccion especifica de Muffins (en pagina producto)-->
         </section>
     </main>
     <footer class="footer">
         <div class="lista prod">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/productos.html">Productos</a></li>
-                <li><a href="pages/galeria.html">Galería</a></li>
-                <li><a href="pages/sobre-mi.html">Sobre mí</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/galeria.html">Galería</a></li>
+                <li><a href="./pages/sobre-mi.html">Sobre mí</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div class="lista nav">
@@ -109,8 +130,10 @@
         </div>
         <div class="logoFooter">
             <h6>Cosas Ricas</h6>
-            <div class="logoFooter"><img src="img/logo.jpg" alt="logo"></div>
-            <p><a href="https://www.google.com/maps/place/Venado+Tuerto,+Santa+Fe/@-33.7495737,-61.972325,13z/data=!3m1!4b1!4m5!3m4!1s0x95c864b3247a525d:0x98c17493f380fdd2!8m2!3d-33.7455566!4d-61.9690161"><i class="fa-solid fa-location-dot"></i> Venado Tuerto, Santa Fe, Argentina</a></p>
+            <div class="logoFooter"><img src="./assets/img/logo.jpg" alt="logo"></div>
+            <p><a
+                    href="https://www.google.com/maps/place/Venado+Tuerto,+Santa+Fe/@-33.7495737,-61.972325,13z/data=!3m1!4b1!4m5!3m4!1s0x95c864b3247a525d:0x98c17493f380fdd2!8m2!3d-33.7455566!4d-61.9690161"><i
+                        class="fa-solid fa-location-dot"></i> Venado Tuerto, Santa Fe, Argentina</a></p>
         </div>
         <div class="contactoFooter">
             <div class="contac">
@@ -125,10 +148,23 @@
             </div>
         </div>
 
-        <span id="copyrigth"><p>Copyright Cosas Ricas © Todos los derechos reservados</p></span> 
+        <span id="copyrigth">
+            <p>Copyright Cosas Ricas © Todos los derechos reservados</p>
+        </span>
     </footer>
     <div class="subir">
         <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-    </div> 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
