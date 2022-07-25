@@ -1,0 +1,69 @@
+<section class="sec">
+            <h4>Tortas</h4>
+            <div class="imgProdIndex imgProdIndex1"></div>
+            <a href="./pages/contacto.html" class="boton encargar">Encargar</a>
+            <a href="./pages/productos.html" class="boton verMas">Ver más</a>
+            <!--ver como enlazar a la seccion especifica de Tortas (en pagina producto)-->
+        </section>
+        <section class="sec">
+            <h4>Postres</h4>
+            <div class="imgProdIndex imgProdIndex2"></div>
+            <a href="./pages/contacto.html" class="boton encargar">Encargar</a>
+            <a href="./pages/productos.html" class="boton verMas">Ver más</a>
+            <!--ver como enlazar a la seccion especifica de Postres (en pagina producto)-->
+        </section>
+        <section class="sec">
+            <h4>Muffins</h4>
+            <div class="imgProdIndex imgProdIndex3"></div>
+            <a href="./pages/contacto.html" class="boton encargar">Encargar</a>
+            <a href="./pages/productos.html" class="boton verMas">Ver más</a>
+            <!--ver como enlazar a la seccion especifica de Muffins (en pagina producto)-->
+        </section>
+
+
+        
+        <section class="secProd" id="tortas">
+            <h4>Tortas</h4>
+            <a href="./contacto.html" class="boton encargar">Encargar</a>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur modi ratione laboriosam, fuga quidem esse!</p>
+            <div class="imgProdProd imgProdProd1 imgProdProd1a"></div>
+            <div class="imgProdProd1b fotoOculta fotoOculta1"></div>
+            <div class="imgProdProd1c fotoOculta fotoOculta2"></div>
+            <div class="imgProdProd1d fotoOculta fotoOculta3"></div>
+        </section>
+        <section class="secProd" id="postres">
+            <h4>Postres</h4>
+            <a href="./contacto.html" class="boton encargar">Encargar</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nisi similique dignissimos, nostrum maiores accusamus!</p>
+            <div class="imgProdProd imgProdProd2 imgProdProd2a"></div>
+            <div class="imgProdProd2b fotoOculta fotoOculta1"></div>
+            <div class="imgProdProd2c fotoOculta fotoOculta2"></div>
+            <div class="imgProdProd2d fotoOculta fotoOculta3"></div>
+        </section>
+        <section class="secProd" id="muffins">
+            <h4>Muffins</h4>
+            <a href="./contacto.html" class="boton encargar">Encargar</a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate minus eligendi debitis? Aliquam, deleniti impedit.</p>
+            <div class="imgProdProd imgProdProd3 imgProdProd3a"></div>
+            <div class="imgProdProd3b fotoOculta fotoOculta1"></div>
+            <div class="imgProdProd3c fotoOculta fotoOculta2"></div>
+            <div class="imgProdProd3d fotoOculta fotoOculta3"></div>
+        </section>
+        <section class="secProd" id="alfajores">
+            <h4>Alfajores</h4>
+            <a href="./contacto.html" class="boton encargar">Encargar</a>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, saepe reiciendis quaerat nesciunt necessitatibus non.</p>
+            <div class="imgProdProd imgProdProd4 imgProdProd4a"></div>
+            <div class="imgProdProd4b fotoOculta fotoOculta1"></div>
+            <div class="imgProdProd4c fotoOculta fotoOculta2"></div>
+            <div class="imgProdProd4d fotoOculta fotoOculta3"></div>
+        </section>
+        <section class="secProd" id="cajasDulces">
+            <h4>Cajas dulces</h4>
+            <a href="./contacto.html" class="boton encargar">Encargar</a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia inventore facilis dolore, dolorum possimus est.</p>
+            <div class="imgProdProd imgProdProd1 imgProdProd5a"></div>
+            <div class="imgProdProd5b fotoOculta fotoOculta1"></div>
+            <div class="imgProdProd5c fotoOculta fotoOculta2"></div>
+            <div class="imgProdProd5d fotoOculta fotoOculta3"></div>
+        </section>

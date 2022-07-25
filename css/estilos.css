@@ -11,6 +11,7 @@ font-family: 'Playfair Display', serif;
 
 body {
     overflow-x: hidden;
+    background-color: #23201f;
 }
 
 html {
@@ -23,6 +24,7 @@ html {
 /*-------------- barra inicio ---------------*/
 .navbar {
     background-color: #23201f;
+    z-index: 99;
 }
 .navbar-brand {
     display: flex;
@@ -89,6 +91,7 @@ html {
     margin: 0px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 .jumbotron-index {
     background-image: url(../assets/img/muffins2.png);
@@ -107,8 +110,6 @@ html {
 }
 .jumbotron .container {
     background-color: #23201f;
-    max-width: 50%;
-    float: left;
     margin-left: 5%;
     padding: 20px;
     border: #4b0303 5px inset;
@@ -158,7 +159,7 @@ html {
     border: #881c1c solid 1px;
     text-align: center;
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
 }
 
@@ -185,163 +186,61 @@ html {
 /*---------info pedidos inicio---------*/
 /*------------- header fin --------------*/
 
+
 /*-----------------comienzo main index-------------------*/
-.sec {
-    width: 100%;
-    height: 350px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    background-image: url(./fondos/low-poly-grid-haikei.svg);
-    border: solid 2px black;
-    align-items: center;
-    justify-items: stretch;
+.sec-index{
+    color: #fff;
+    margin: 30px 10px;
+    border: #fff 2px solid;
 }
-
-.sec h4 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    font-size: 25px;
+.sec-index h2 {
     text-align: center;
-    font-style: italic;
-    font-weight: 1500;
+    background-color: #881c1c;
+    padding: 10px;
+    text-shadow: 0 0 5px #23201f;
+    border: #fff 2px solid;
 }
+.img-carousel-index{
+    width: 100%;
+    height: 40vh;
+    padding: 10px;
+    border-radius: 10%;
 
-.sec .imgProdIndex {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    height: 200px;
-    width: 200px;
-    justify-self: center;
-    border: 2px solid #fff;
-    box-shadow: 2px 2px 5px #333;
 }
-
-.imgProdIndex:hover {
-    transform: scale(1.05);
-    transition: all 0.7s;
+.logoViejo-index{
+    padding: 10px;
+    border-radius: 10%;
+    max-height: 40vh;
+    width: 70%;
+    display: flex;
+    margin: 0px 15%;
 }
-
-.sec .encargar {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    justify-self: center;
-    width: auto;
-    padding: 5px 10px;
+.text-sec-index h3{
+    color: #f38383;
+    text-align: center;
+    padding: 15px;
+    text-shadow: 0 0 5px #881c1c;
 }
-
-.sec .verMas {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    justify-self: center;
-    width: auto;
-    padding: 5px 10px;
+.text-sec-index p{
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    text-align: center;
 }
-
-.imgProdIndex1 {
-    background-image: url(../assets/img/tortaPanda.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio1;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio1 {
-    0% {
-        background-image: url(../assets/img/tortaPanda.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/tortaCeleste.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/tortaChop.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/tortaGolondrinas.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/tortaPanda.png);
-    }
-}
-
-.imgProdIndex2 {
-    background-image: url(../assets/img/cheeseCake.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio2;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio2 {
-    0% {
-        background-image: url(../assets/img/cheeseCake.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/brownie.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/lemonPie.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/frutilla.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/cheeseCake.png);
-    }
-}
-
-.imgProdIndex3 {
-    background-image: url(../assets/img/muffins.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio3;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio3 {
-    0% {
-        background-image: url(../assets/img/muffins.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/cookies.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/muffins2.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/cookies2.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/muffins.png);
-    }
+.img-sec-index i{
+    color: #fff;
+    font-size: 100px;
+    padding: 10px;
 }
 
 .boton {
+    font-size: 1.2rem;
+    background-color: #881c1c;
+    border: solid 1px white;
+    margin: 20px 0px;
     color: #fff;
-    font-size: 18px;
-    background-color: #511364;
     text-decoration: none;
     padding: 5px;
     border-radius: 10%;
-    border: #fff solid 2px;
     text-align: center;
     width: 120px;
     justify-content: center;
@@ -350,607 +249,44 @@ html {
 .boton:hover {
     background-color: #23201f;
     transform: scale(1.1);
+    text-decoration: none;
 }
 
 /*-----------------fin main index-------------------*/
 
 /*-----------------comienzo main productos-------------------*/
-.secProd {
-    width: 100%;
-    height: 420px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
-    background-image: url(./fondos/low-poly-grid-haikei.svg);
-    border: solid 2px black;
-    align-items: center;
-    justify-items: stretch;
+.sec-prod{
+    border:#fff double 0.6rem;
+    margin: 3%;
+    background-color: #4b0303;
+    padding: 3%; width: 90%;
+}
+.titulo-prod{
     text-align: center;
+    background-color: #4b0303;
+    color: #fff;
+    padding: 3%;
 }
-
-.secProd h4 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 30px;
-    padding: 5px;
-    font-style: italic;
-    font-weight: 1500;
+.img-carousel-prod{
+    width: 90%;
+    height: 35vh;
 }
-
-.secProd .imgProdProd {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    height: 200px;
-    width: 180px;
-    border: 2px solid #fff;
-    box-shadow: 2px 2px 5px #333;
-    padding: 5px;
-    justify-self: center;
+.carousel-caption button {
+    font-size: 2rem;
+    background-color: #881c1c;
+    border: solid 3px #fff;
+    border-radius: 10%;
 }
-
-.secProd .imgProdProd:hover {
-    transform: scale(1.05);
-    transition: all 0.7s;
+.carousel-caption button:hover {
+    background-color: #4b0303;
+    border: solid 4px #fff;
+    transform: scale(1.1);
+    color: #fff;
+    text-decoration: none;
 }
-
-.secProd .fotoOculta {
-    border: 2px solid #fff;
-    box-shadow: 2px 2px 5px #333;
-    height: 85%;
-    width: 75%;
-    background-position: center;
-    background-size: cover;
-    display: none;
+.carousel-caption a:hover {
+    text-decoration: none;
 }
-
-.secProd .fotoOculta:hover {
-    transform: scale(1.05);
-    transition: all 0.7s;
-}
-
-.secProd .encargar {
-    grid-column: 1/2;
-    grid-row: 4/5;
-    justify-self: center;
-}
-
-.secProd p {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    font-size: 16px;
-    padding: 5px;
-}
-
-.imgProdProd1a {
-    background-image: url(../assets/img/tortaPanda.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio1;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-.imgProdProd2a {
-    background-image: url(../assets/img/cheeseCake.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio2;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-.imgProdProd3a {
-    background-image: url(../assets/img/muffins.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio3;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-.imgProdProd4a {
-    background-image: url(../assets/img/alfajores.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio4;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio4 {
-    0% {
-        background-image: url(../assets/img/alfajores.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/alfajores2.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/alfajores3.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/alfajores4.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/alfajores.png);
-    }
-}
-
-.imgProdProd5a {
-    background-image: url(../assets/img/cajaUno.png);
-    background-position: center;
-    background-size: cover;
-    animation-name: cambio5;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio5 {
-    0% {
-        background-image: url(../assets/img/cajaUno.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/cajaDos.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/caja3.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/caja4.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/cajaUno.png);
-    }
-}
-
-.secProd .imgProdProd1b {
-    animation-name: cambio1b;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio1b {
-    0% {
-        background-image: url(../assets/img/tortaGolondrinas.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/tortaPanda.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/tortaCeleste.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/tortaChop.png);
-
-    }
-
-    100% {
-        background-image: url(../assets/img/tortaGolondrinas.png);
-    }
-}
-
-.secProd .imgProdProd1c {
-    animation-name: cambio1c;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio1c {
-    0% {
-        background-image: url(../assets/img/tortaChop.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/tortaGolondrinas.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/tortaPanda.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/tortaCeleste.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/tortaChop.png);
-    }
-}
-
-.secProd .imgProdProd1d {
-    animation-name: cambio1d;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio1d {
-    0% {
-        background-image: url(../assets/img/tortaCeleste.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/tortaChop.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/tortaGolondrinas.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/tortaPanda.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/tortaCeleste.png);
-    }
-}
-
-.secProd .imgProdProd2b {
-    animation-name: cambio2b;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio2b {
-    0% {
-        background-image: url(../assets/img/frutilla.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/cheeseCake.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/brownie.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/lemonPie.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/frutilla.png);
-    }
-}
-
-.secProd .imgProdProd2c {
-    animation-name: cambio2c;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio2c {
-    0% {
-        background-image: url(../assets/img/lemonPie.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/frutilla.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/cheeseCake.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/brownie.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/lemonPie.png);
-    }
-}
-
-.secProd .imgProdProd2d {
-    animation-name: cambio2d;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio2d {
-    0% {
-        background-image: url(../assets/img/brownie.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/lemonPie.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/frutilla.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/cheeseCake.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/brownie.png);
-    }
-}
-
-.secProd .imgProdProd3b {
-    animation-name: cambio3b;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio3b {
-    0% {
-        background-image: url(../assets/img/cookies2.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/muffins.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/cookies.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/muffins2.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/cookies2.png);
-    }
-}
-
-.secProd .imgProdProd3c {
-    animation-name: cambio3c;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio3c {
-    0% {
-        background-image: url(../assets/img/muffins2.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/cookies2.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/muffins.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/cookies.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/muffins2.png);
-    }
-}
-
-.secProd .imgProdProd3d {
-    animation-name: cambio3d;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio3d {
-    0% {
-        background-image: url(../assets/img/cookies.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/muffins2.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/cookies2.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/muffins.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/cookies.png);
-    }
-}
-
-.secProd .imgProdProd4b {
-    animation-name: cambio4b;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio4b {
-    0% {
-        background-image: url(../assets/img/alfajores4.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/alfajores.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/alfajores2.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/alfajores3.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/alfajores4.png);
-    }
-}
-
-.secProd .imgProdProd4c {
-    animation-name: cambio4c;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio4c {
-    0% {
-        background-image: url(../assets/img/alfajores3.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/alfajores4.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/alfajores.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/alfajores2.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/alfajores3.png);
-    }
-}
-
-.secProd .imgProdProd4d {
-    animation-name: cambio4d;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio4d {
-    0% {
-        background-image: url(../assets/img/alfajores2.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/alfajores3.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/alfajores4.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/alfajores.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/alfajores2.png);
-    }
-}
-
-.secProd .imgProdProd5b {
-    animation-name: cambio5b;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio5b {
-    0% {
-        background-image: url(../assets/img/caja4.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/cajaUno.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/cajaDos.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/caja3.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/caja4.png);
-    }
-}
-
-.secProd .imgProdProd5c {
-    animation-name: cambio5c;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio5c {
-    0% {
-        background-image: url(../assets/img/caja3.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/caja4.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/cajaUno.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/cajaDos.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/caja3.png);
-    }
-}
-
-.secProd .imgProdProd5d {
-    animation-name: cambio5d;
-    animation-duration: 60s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes cambio5d {
-    0% {
-        background-image: url(../assets/img/cajaDos.png);
-    }
-
-    25% {
-        background-image: url(../assets/img/caja3.png);
-    }
-
-    50% {
-        background-image: url(../assets/img/caja4.png);
-    }
-
-    75% {
-        background-image: url(../assets/img/cajaUno.png);
-    }
-
-    100% {
-        background-image: url(../assets/img/cajaDos.png);
-    }
-}
-
 /*-----------------fin main productos-------------------*/
 
 /*-----------------comienzo main galeria-------------------*/
@@ -1167,13 +503,12 @@ input:focus {
 
 /*-----------------comienzo FOOTER-------------------*/
 .footer {
-    position: relative;
-    top: 80px;
     min-height: 150px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 15px;
-    background-color: #23201f;
+    background-color: #0e0c0b;
+    border: #fff solid 2px;
 }
 
 .footer .contactoFooter {
@@ -1277,10 +612,10 @@ input:focus {
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    background-color: #370846de;
+    background-color: #4b0303;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 5%;
+    right: 5%;
     text-align: center;
     font-size: 20px;
     line-height: 35px;
@@ -1337,10 +672,6 @@ input:focus {
 
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo productos-------------------*/
-    .secProd {
-        height: 450px;
-    }
-
     /*-----------------fin productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .item {
@@ -1392,41 +723,6 @@ input:focus {
 
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
-    .secProd {
-        width: 100%;
-        height: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-
-    .secProd h4 {
-        font-size: 30px;
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    .secProd .imgProdProd {
-        height: 95%;
-        width: 95%;
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .secProd .encargar {
-        padding: 5px 20px;
-        font-size: 18px;
-        width: auto;
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .secProd p {
-        font-size: 16px;
-        padding: 5px;
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
     /*-----------------comienzo main productos-------------------*/
 }
 
@@ -1473,41 +769,6 @@ input:focus {
 
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
-    .secProd {
-        width: 100%;
-        height: 300px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-
-    .secProd h4 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-        font-size: 40px;
-    }
-
-    .secProd .imgProdProd {
-        height: 280px;
-        width: 230px;
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .secProd p {
-        font-size: 16px;
-        padding: 10px 20px;
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-    .secProd .encargar {
-        padding: 10px 30px;
-        font-size: 20px;
-        width: auto;
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
     /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
@@ -1588,41 +849,6 @@ input:focus {
 
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
-    .secProd {
-        width: 100%;
-        height: 400px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-
-    .secProd h4 {
-        font-size: 60px;
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    .secProd .imgProdProd {
-        height: 380px;
-        width: 280px;
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .secProd .encargar {
-        padding: 10px 30px;
-        font-size: 30px;
-        width: auto;
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .secProd p {
-        font-size: 18px;
-        padding: 10px 20px;
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
     /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo main galeria-------------------*/
     .galeria {
@@ -1697,8 +923,6 @@ input:focus {
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
-        position: relative;
-        top: 100px;
         min-height: 200px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1802,66 +1026,6 @@ input:focus {
 
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
-    .secProd {
-        width: 100%;
-        height: 450px;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: repeat(3, 1fr);
-        justify-items: center;
-        align-items: center;
-    }
-
-    .secProd h4 {
-        font-size: 50px;
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-
-    .secProd .imgProdProd {
-        height: 95%;
-        width: 95%;
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .secProd .fotoOculta {
-        display: grid;
-        height: 85%;
-        width: 75%;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .secProd .fotoOculta1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    .secProd .fotoOculta2 {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-    .secProd .fotoOculta3 {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .secProd .encargar {
-        padding: 10px 30px;
-        font-size: 25px;
-        width: auto;
-        grid-column: 3/4;
-        grid-row: 3/4;
-    }
-
-    .secProd p {
-        font-size: 18px;
-        padding: 10px 20px;
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
-
     /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
@@ -1957,8 +1121,6 @@ input:focus {
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
-        position: relative;
-        top: 100px;
         min-height: 200px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -2058,126 +1220,6 @@ input:focus {
 
     /*-----------------fin main index-------------------*/
     /*-----------------comienzo main productos-------------------*/
-    .secProd {
-        width: 100%;
-        height: 500px;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: repeat(3, 1fr);
-        justify-items: center;
-        align-items: center;
-    }
-
-    .secProd h4 {
-        font-size: 80px;
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-
-    .secProd .imgProdProd {
-        height: 95%;
-        width: 95%;
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .secProd .fotoOculta {
-        display: grid;
-        height: 85%;
-        width: 75%;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .secProd .fotoOculta1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    .secProd .fotoOculta2 {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-    .secProd .fotoOculta3 {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .secProd .imgProdProd1b {
-        background-image: url(../img/tortaCeleste.png);
-    }
-
-    .secProd .imgProdProd1c {
-        background-image: url(../img/tortaGolondrinas.png);
-    }
-
-    .secProd .imgProdProd1d {
-        background-image: url(../img/tortaChop.png);
-    }
-
-    .secProd .imgProdProd2b {
-        background-image: url(../img/brownie.png);
-    }
-
-    .secProd .imgProdProd2c {
-        background-image: url(../img/lemonPie.png);
-    }
-
-    .secProd .imgProdProd2d {
-        background-image: url(../img/frutilla.png);
-    }
-
-    .secProd .imgProdProd3b {
-        background-image: url(../img/cookies.png);
-    }
-
-    .secProd .imgProdProd3c {
-        background-image: url(../img/muffins2.png);
-    }
-
-    .secProd .imgProdProd3d {
-        background-image: url(../img/cookies2.png);
-    }
-
-    .secProd .imgProdProd4b {
-        background-image: url(../img/alfajores2.png);
-    }
-
-    .secProd .imgProdProd4c {
-        background-image: url(../img/alfajores3.png);
-    }
-
-    .secProd .imgProdProd4d {
-        background-image: url(../img/alfajores4.png);
-    }
-
-    .secProd .imgProdProd5b {
-        background-image: url(../img/cajaDos.png);
-    }
-
-    .secProd .imgProdProd5c {
-        background-image: url(../img/caja3.png);
-    }
-
-    .secProd .imgProdProd5d {
-        background-image: url(../img/caja4.png);
-    }
-
-    .secProd p {
-        font-size: 25px;
-        padding: 10px 20px;
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
-
-    .secProd .encargar {
-        padding: 10px 30px;
-        font-size: 30px;
-        width: auto;
-        grid-column: 3/4;
-        grid-row: 3/4;
-    }
-
     /*-----------------comienzo main productos-------------------*/
     /*-----------------comienzo galeria-------------------*/
     .galeria {
@@ -2255,8 +1297,6 @@ input:focus {
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
-        position: relative;
-        top: 100px;
         min-height: 200px;
         display: grid;
         grid-template-columns: 1fr 1fr 2fr 2fr;
@@ -2331,9 +1371,30 @@ input:focus {
 }
 
 @media only screen and (min-width: 1200px) {
-    /*----------------comienzo encabezado---------------------*/
-    /*----------------fin encabezado--------------------------*/
-
+    /*----------------header comienzo---------------------*/
+    .logo {
+        width: 6rem;
+        margin: 10%;
+    }
+    .navbar-brand h2{
+        font-size: 3rem;
+        margin: 10px 5px;
+    }
+    .navbar-brand h2 span{
+        display: block;
+        padding-left: 25px;
+    }
+    .jumbotron {
+        min-height: 60vh;
+    }
+    .jumbotron .container {
+        max-width: 25%;
+    }
+    .infoPedidos {
+        font-size: 3rem;
+        border: #881c1c solid 3px;
+    }
+    /*----------------header fin--------------------------*/    
     /*-----------------comienzo main index-------------------*/
     .sec {
         height: 750px;
@@ -2374,128 +1435,11 @@ input:focus {
     }
 
     /*-----------------fin main index-------------------*/
-    /*-----------------comienzo main productos-------------------*/
-    .secProd {
-        width: 100%;
-        height: 750px;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-rows: repeat(3, 1fr);
-        justify-items: center;
-        align-items: center;
+    /*-------------- main productos comienzo ------------*/
+    .carousel-caption button {
+        font-size: 3rem;
     }
-
-    .secProd h4 {
-        font-size: 90px;
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-
-    .secProd .imgProdProd {
-        height: 95%;
-        width: 95%;
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-
-    .secProd .fotoOculta {
-        display: grid;
-        height: 85%;
-        width: 75%;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .secProd .fotoOculta1 {
-        grid-column: 2/3;
-        grid-row: 1/2;
-    }
-
-    .secProd .fotoOculta2 {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-    .secProd .fotoOculta3 {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .secProd .imgProdProd1b {
-        background-image: url(../img/tortaCeleste.png);
-    }
-
-    .secProd .imgProdProd1c {
-        background-image: url(../img/tortaGolondrinas.png);
-    }
-
-    .secProd .imgProdProd1d {
-        background-image: url(../img/tortaChop.png);
-    }
-
-    .secProd .imgProdProd2b {
-        background-image: url(../img/brownie.png);
-    }
-
-    .secProd .imgProdProd2c {
-        background-image: url(../img/lemonPie.png);
-    }
-
-    .secProd .imgProdProd2d {
-        background-image: url(../img/frutilla.png);
-    }
-
-    .secProd .imgProdProd3b {
-        background-image: url(../img/cookies.png);
-    }
-
-    .secProd .imgProdProd3c {
-        background-image: url(../img/muffins2.png);
-    }
-
-    .secProd .imgProdProd3d {
-        background-image: url(../img/cookies2.png);
-    }
-
-    .secProd .imgProdProd4b {
-        background-image: url(../img/alfajores2.png);
-    }
-
-    .secProd .imgProdProd4c {
-        background-image: url(../img/alfajores3.png);
-    }
-
-    .secProd .imgProdProd4d {
-        background-image: url(../img/alfajores4.png);
-    }
-
-    .secProd .imgProdProd5b {
-        background-image: url(../img/cajaDos.png);
-    }
-
-    .secProd .imgProdProd5c {
-        background-image: url(../img/caja3.png);
-    }
-
-    .secProd .imgProdProd5d {
-        background-image: url(../img/caja4.png);
-    }
-
-    .secProd p {
-        font-size: 30px;
-        padding: 10px 20px;
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
-
-    .secProd .encargar {
-        padding: 15px 35px;
-        font-size: 40px;
-        width: auto;
-        grid-column: 3/4;
-        grid-row: 3/4;
-    }
-
-    /*-----------------comienzo main productos-------------------*/
+    /*---------------- main productos fin ------------*/   
     /*-----------------comienzo galeria-------------------*/
     .galeria {
         display: grid;
@@ -2573,8 +1517,6 @@ input:focus {
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
-        position: relative;
-        top: 100px;
         min-height: 200px;
         display: grid;
         grid-template-columns: 1fr 1fr 2fr 2fr;
@@ -2649,15 +1591,12 @@ input:focus {
 }
 
 /*---------FALTA------------------
-ENCABEZADO
-- Funcionalidad botón hamburguesa.
 
-- Agregar redes en el centro cuando aparece botón hamburguesa.
+- Agregar redes al costado
 
 - Ver por qué no anda sticky info pedidos y no funciona el top:80px ó 100px
 LO CAMBIÉ A RELATIVE PARA QUE SE VEA BIEN
 
-- Enlazar bien el submenú de productos
 -----------FALTA-------------------*/
 @media only screen and (min-width: 768px) {
     /*----------------comienzo encabezado---------------------*/
@@ -2712,33 +1651,11 @@ LO CAMBIÉ A RELATIVE PARA QUE SE VEA BIEN
     .infoPedidos {
         font-size: 2.5rem;
     }
-    /*----------------fin encabezado--------------------------*/
-}
+    /*----------------header fin--------------------------*/
 
-@media only screen and (min-width: 1200px) {
-
-    /*----------------comienzo encabezado---------------------*/
-    .logo {
-        width: 6rem;
-        margin: 10%;
-    }
-    .navbar-brand h2{
+    /*-------------- main productos comienzo ------------*/
+    .carousel-caption button {
         font-size: 3rem;
-        margin: 10px 5px;
     }
-    .navbar-brand h2 span{
-        display: block;
-        padding-left: 25px;
-    }
-    .jumbotron {
-        min-height: 60vh;
-    }
-    .jumbotron .container {
-        max-width: 25%;
-    }
-    .infoPedidos {
-        font-size: 3rem;
-        border: #881c1c solid 3px;
-    }
-    /*----------------fin encabezado--------------------------*/
+    /*---------------- main productos fin ------------*/
 }
