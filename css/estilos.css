@@ -453,9 +453,13 @@ html {
     align-self: center;
     border-radius: 10%;
     margin: 30px 20px;
-    padding: 25px;
+    padding: 15px;
     font-size: 20px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .contForm .textoForm {
@@ -541,7 +545,7 @@ input:focus {
 }
 
 .footer .redesFooter i:hover {
-    color: #7c01a1;
+    color: #df3030;
 }
 
 .footer #copyrigth {
@@ -580,7 +584,7 @@ input:focus {
 }
 
 .lista ul li a:hover {
-    color: #cd34fc;
+    color: #df3030;
 }
 
 .footer .logo {
@@ -595,7 +599,7 @@ input:focus {
 }
 
 .footer .logoFooter p a:hover {
-    color: #cd34fc;
+    color: #df3030;
 }
 
 /*-----------------fin FOOTER-------------------*/
@@ -750,9 +754,15 @@ input:focus {
     .contForm {
         height: 400px;
         width: 40%;
-        font-size: 20px;
     }
-
+    .contForm .textoForm {
+        margin: 0px;
+        padding: 0px;
+    }
+    .contForm .complForm {
+        margin: 0px;
+        width: 100%;
+    }
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
@@ -957,9 +967,15 @@ input:focus {
     .contForm {
         height: 450px;
         width: 40%;
-        font-size: 25px;
     }
-
+    .contForm .textoForm {
+        margin: 0px;
+        padding: 0px;
+    }
+    .contForm .complForm {
+        margin: 0px;
+        width: 100%;
+    }
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
@@ -1087,9 +1103,15 @@ input:focus {
     .contForm {
         height: 450px;
         width: 40%;
-        font-size: 25px;
     }
-
+    .contForm .textoForm {
+        margin: 0px;
+        padding: 0px;
+    }
+    .contForm .complForm {
+        margin: 0px;
+        width: 100%;
+    }
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {
@@ -1289,9 +1311,15 @@ input:focus {
     .contForm {
         height: 60vh;
         width: 35%;
-        font-size: 25px;
     }
-
+    .contForm .textoForm {
+        margin: 0px;
+        padding: 0px;
+    }
+    .contForm .complForm {
+        margin: 0px;
+        width: 100%;
+    }
     /*-----------------comienzo fin contacto-------------------*/
     /*-----------------comienzo footer-------------------*/
     .footer {

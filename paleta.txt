@@ -1,4 +1,1 @@
 Gris logo: #23201f
-Violeta oscuro: #511364
-Violeta: #7c01a1
-Violetita: #b574d6
