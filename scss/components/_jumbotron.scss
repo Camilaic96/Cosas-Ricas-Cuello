@@ -1,0 +1,71 @@
+.jumbotron {
+    background-position: center;
+    background-size: cover;
+    color: $colorBlanco;
+    min-height: 30vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    & .container {
+        background-color: $colorGris;
+        margin-left: 5%;
+        padding: 20px;
+        border: $colorBordo 5px inset;
+        text-shadow: 0 0 5px $colorBordoClaro;
+        justify-items: center;
+
+        h1 {
+            font-size: 2rem;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+        }
+        p {
+            font-size: 1.5rem;
+
+            .redes a {
+                color: $colorBlanco;
+                font-size: 1.6rem;
+                letter-spacing: 20px;
+            }
+            .redes a:hover {
+                color: #881c1c;
+                font-size: 2rem;
+            }
+        }
+        button {
+            font-size: 1.2rem;
+            background-color: #881c1c;
+            border: solid 1px $colorBlanco;
+            margin: 20px 0px;
+            display: flex;
+        }
+        button:hover {
+            background-color: #4b0303;
+            border: solid 2px $colorBlanco;
+            transform: scale(1.1);
+            color: $colorBlanco;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+}
+.jumbotron-index {
+    background-image: url(../assets/img/muffins2.png);
+}
+.jumbotron-productos {
+    background-image: url(../assets/img/frutilla.png);
+}
+.jumbotron-galeria {
+    background-image: url(../assets/img/frutosRojos.png);
+}
+.jumbotron-sobre-mi {
+    background-image: url(../assets/img/cheeseCake.png);
+}
+.jumbotron-contacto {
+    background-image: url(../assets/img/alfajores4.png);
+}
